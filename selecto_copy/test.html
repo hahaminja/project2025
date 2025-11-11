@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>selecto</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div.ani1 {
+        width: 186px;
+        height: 186px;
+        position: relative;
+        margin: 50px auto;
+      }
+      div.ani1 > a,
+      div.ani1 > p > img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      div.ani1 > p > img {
+        width: 100%;
+        animation-name: rotate;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+      @keyframes rotate {
+        /* from {
+          transform: translate(-50%, -50%) rotate(0);
+        } */
+        to {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+      /* 텍스트 */
+      .txt_wrap {
+        width: 100%;
+        height: 50px;
+        border-top: 1px solid #ff4713;
+        position: relative;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      .txt_wrap > div {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        animation-name: txt;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+      .txt_wrap > div span {
+        font-size: 36px;
+        color: #ff4713;
+      }
+      @keyframes txt {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-30%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ani1">
+      <a href="#">
+        <img
+          src="https://www.selecto.co.kr/assets/images/main/m-arrow.png"
+          alt="arrow"
+        />
+      </a>
+      <p>
+        <img
+          src="https://www.selecto.co.kr/assets/images/main/m-circle-txt.png"
+          alt="circle"
+        />
+      </p>
+    </div>
+    <div class="txt_wrap">
+      <div>
+        <span>
+          <img
+            src="	https://www.selecto.co.kr/assets/images/main/m-3rd_sec-marquee.png"
+            alt="icon"
+          />매장에서 직접 구워 맛있는 셀렉토 베이커리
+        </span>
+        <span>
+          <img
+            src="	https://www.selecto.co.kr/assets/images/main/m-3rd_sec-marquee.png"
+            alt="icon"
+          />매장에서 직접 구워 맛있는 셀렉토 베이커리
+        </span>
+        <span>
+          <img
+            src="	https://www.selecto.co.kr/assets/images/main/m-3rd_sec-marquee.png"
+            alt="icon"
+          />매장에서 직접 구워 맛있는 셀렉토 베이커리
+        </span>
+        <span>
+          <img
+            src="	https://www.selecto.co.kr/assets/images/main/m-3rd_sec-marquee.png"
+            alt="icon"
+          />매장에서 직접 구워 맛있는 셀렉토 베이커리
+        </span>
+      </div>
+    </div>
+  </body>
+</html>
