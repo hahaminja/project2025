@@ -41,7 +41,15 @@ section {
 section .txt {
   margin-bottom: 100px;
 }
-/* #0066ff 30px 18px #777 */
+section .txt > p {
+  font-size: 18px;
+  color: #777;
+}
+section .txt > p > strong {
+  font-size: 30px;
+  color: #0066ff;
+}
+
 section:nth-of-type(1) {
   background-image: url(../images/bg_W.png);
   z-index: 1;
@@ -60,8 +68,9 @@ section:nth-of-type(3) {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  z-index: 10;
 }
 section p:last-child {
   position: relative;
-  z-index: 2;
+  z-index: 20;
 }
