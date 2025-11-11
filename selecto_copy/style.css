@@ -87,7 +87,7 @@ a {
   height: 400px;
   background: rgb(243, 215, 215);
   border-top: 1px solid #ddd;
-  display: none;
+  /* display: none; */
 }
 .sub ul {
   /* margin: 0 40px; */
@@ -377,6 +377,7 @@ div.marquee_wrap .marquee_txt img {
   justify-content: space-between;
   align-items: center;
   color: #ff4713;
+  cursor: pointer;
 }
 .newsEvent_wrap .newsEvent .event .item_txt > p:first-child {
   font-size: 18px;
@@ -395,12 +396,17 @@ div.marquee_wrap .marquee_txt img {
   opacity: 0.7;
 }
 
-.newsEvent_wrap .newsEvent .event .event_img {
+.newsEvent_wrap .newsEvent .event .event_item .event_img {
   position: absolute;
   top: 0;
   right: 190px;
   width: 224.66px;
   height: 100%;
+  opacity: 0;
+  transition: 0.8s;
+}
+.newsEvent_wrap .newsEvent .event .event_item:hover .event_img {
+  opacity: 1;
 }
 .newsEvent_wrap .newsEvent .event .event_img img {
   width: 100%;
