@@ -83,6 +83,7 @@ section:nth-of-type(3) {
 section p:last-child {
   position: relative;
   z-index: 20;
+<<<<<<< HEAD
 }
 /*  */
 .sns_content {
@@ -141,4 +142,6 @@ section p:last-child {
   width: 213px;
   margin: 0 auto;
   display: block;
+=======
+>>>>>>> 174e5767d7b07e0f6ec2576017ac183e08a303eb
 }
