@@ -14,25 +14,53 @@ header {
   position: fixed;
 }
 .header {
-  width: 1550px;
+  /* width: 1550px; */
   margin: 0 auto;
   top: 0;
   height: 100px;
   padding-top: 50px;
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+}
+.header > a:first-child {
+  position: absolute;
+  left: 180px;
 }
 .header > a > img {
   width: 213px;
   display: block;
+  z-index: 9999;
 }
-.header .menu {
+.header .open_btn {
+  position: absolute;
+  top: 55px;
+  right: 200px;
+  display: block;
   width: 30px;
   height: 30px;
-  display: block;
+  background: url(../images/menu_b.png) no-repeat center center;
+  background-size: 100%;
 }
-.header .menu img {
+
+/* 버튼 메뉴 */
+.menu_inner {
   width: 100%;
+  height: 100vh;
+  background: url(../images/bg_B.png);
+  position: relative;
+  z-index: 9999;
+  display: none;
+}
+.menu_inner .menu_wrap {
+  border: 1px solid pink;
+}
+.menu_inner > .menu_wrap ul {
+  display: flex;
+  flex-direction: column;
+}
+.menu_inner .menu_wrap ul li a {
+  display: block;
+  font-size: 45px;
+  color: #fff;
 }
 /* 메인 섹션 */
 section {
@@ -83,9 +111,8 @@ section:nth-of-type(3) {
 section p:last-child {
   position: relative;
   z-index: 20;
-<<<<<<< HEAD
 }
-/*  */
+
 .sns_content {
   height: 918px;
   /* min-height: 1280px; */
@@ -142,6 +169,4 @@ section p:last-child {
   width: 213px;
   margin: 0 auto;
   display: block;
-=======
->>>>>>> 174e5767d7b07e0f6ec2576017ac183e08a303eb
 }
