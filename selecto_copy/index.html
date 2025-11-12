@@ -28,6 +28,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   </head>
   <body>
+    <div class="customPointer"></div>
     <div class="wrap">
       <header>
         <div class="head">
@@ -45,7 +46,7 @@
               <div class="sub_bg">
                 <div class="sub">
                   <ul>
-                    <li><a href="#">비전체계</a></li>
+                    <li><a href="./selecto.html">비전체계</a></li>
                     <li><a href="#">HISTORY</a></li>
                     <li><a href="#">BI</a></li>
                     <li><a href="#">경쟁력</a></li>
@@ -403,6 +404,14 @@
     </div>
 
     <script>
+      //마우스커서
+      let cursor = document.querySelector(".customPointer");
+      document.onmousemove = function (e) {
+        //보여지는 브라우저 안에서의 좌표값
+        cursor.style.top = e.clientY + "px";
+        cursor.style.left = e.clientX + "px";
+      };
+
       //메뉴
       // $(".menu > li").hover(function () {});
       $(".menu > ul").hover(
@@ -424,6 +433,16 @@
           $(".fc_btn").removeClass("on");
         }
       );
+
+      //뉴스이벤트
+      // $(".event_item").hover(
+      //   function () {
+      //     $(".event_img").addClass("on");
+      //   },
+      //   function () {
+      //     $(".event_img").removeClass("on");
+      //   }
+      // );
 
       //비주얼 슬라이드
       var swiper = new Swiper(".mySwiper", {

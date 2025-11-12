@@ -38,6 +38,16 @@ a {
 .primary_color {
   color: #ff4713;
 }
+/* 마우스커서 */
+/* .customPointer {
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  background-image: url(./images/new_mouse-cursor.png);
+  background-size: contain;
+  background-position: left top;
+  z-index: 999;
+} */
 /* header 시작 */
 .wrap {
   font-family: "Noto Sans KR", sans-serif;
@@ -385,7 +395,7 @@ div.marquee_wrap .marquee_txt img {
   justify-content: space-between;
   align-items: center;
   color: #ff4713;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .newsEvent_wrap .newsEvent .event .item_txt > p:first-child {
   font-size: 18px;
@@ -420,6 +430,7 @@ div.marquee_wrap .marquee_txt img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  z-index: 999;
 }
 
 /* 뉴스&이벤트 끝 */

@@ -22,13 +22,17 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <!-- AOS애니메이션 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Swiper JS -->
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- 제이쿼리 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   </head>
   <body>
+    <div class="customPointer"></div>
     <div class="wrap">
       <header>
         <div class="head">
@@ -38,7 +42,7 @@
             </a>
             <div class="menu">
               <ul>
-                <li><a href="#">셀렉토커피</a></li>
+                <li><a href="./selecto.html">셀렉토커피</a></li>
                 <li><a href="#">메뉴</a></li>
                 <li><a href="#">매장안내</a></li>
                 <li><a href="#">WHAT'S NEW</a></li>
@@ -46,7 +50,7 @@
               <div class="sub_bg">
                 <div class="sub">
                   <ul>
-                    <li><a href="#">비전체계</a></li>
+                    <li><a href="./selecto.html">비전체계</a></li>
                     <li><a href="#">HISTORY</a></li>
                     <li><a href="#">BI</a></li>
                     <li><a href="#">경쟁력</a></li>
@@ -88,14 +92,19 @@
       <section class="section1">
         <div class="bg"></div>
         <div class="txt_box">
-          <div>
+          <div data-aos="fade-left" data-aos-duration="2500">
             <h1>BRAND MISSION</h1>
             <p>
               취향을 만족시키는 좋은 커피를 합리적인 <br />
               가격으로 제공합니다.
             </p>
           </div>
-          <div class="txt_bottm">
+          <div
+            class="txt_bottm"
+            data-aos="fade-left"
+            data-aos-duration="2500"
+            data-aos-delay="500"
+          >
             <h1>BRAND VISION</h1>
             <p>
               평범한 일상 속에서 누구나 좋은 커피를 <br />
@@ -107,8 +116,13 @@
       <section class="section2">
         <div class="bg"></div>
         <div class="txt_box">
-          <h1>핵심가치</h1>
-          <div class="inner_wrap">
+          <h1 data-aos="fade-left" data-aos-duration="2500">핵심가치</h1>
+          <div
+            class="inner_wrap"
+            data-aos="fade-left"
+            data-aos-duration="2500"
+            data-aos-delay="200"
+          >
             <div class="inner_txt">
               <h2>퀄리티를 보장하는 전문성</h2>
               <p>
@@ -208,6 +222,8 @@
           $(".fc_btn").removeClass("on");
         }
       );
+      // AOS
+      AOS.init();
     </script>
   </body>
 </html>
