@@ -9,26 +9,85 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 ul {
   list-style: none;
 }
-ul li {
+a {
+  text-decoration: none;
+  color: #000;
+}
+/* 메뉴 */
+header {
+  width: 100vw;
+  position: fixed;
+}
+.header {
+  /* width: 1550px; */
+  margin: 0 auto;
+  top: 0;
+  height: 80px;
+  padding-top: 15px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
   display: flex;
-  /* height: 770px; */
-  aspect-ratio: 1/0.5;
+  justify-content: center;
+  align-items: center;
+}
+.header > a:first-child {
+  position: absolute;
+  left: 180px;
+}
+.header > a > img {
+  width: 213px;
+  display: block;
+  z-index: 9999;
+}
+.header nav ul {
+  display: flex;
+  gap: 20px;
+}
+.header nav ul li a {
+  font-size: 18px;
+  display: block;
+  padding: 10px 15px;
+}
+.header nav ul li a:hover {
+  border-bottom: 3px solid #0066ff;
+  text-decoration: none;
+  padding-bottom: 7px;
+}
+
+/* .header .open_btn {
+  position: absolute;
+  top: 55px;
+  right: 200px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(../images/menu_b.png) no-repeat center center;
+  background-size: 100%;
+} */
+/* 메뉴 */
+
+/* 섹션 시작 */
+section ul li {
+  display: flex;
+  height: 770px;
+  /* aspect-ratio: 1/0.5; */
   /* ↑ aspect-ratio 가로 비율에 세로는 절반 */
 }
-ul li:nth-child(even) {
+section ul li:nth-child(even) {
   flex-direction: row-reverse;
 }
-ul li > div,
-ul li > p {
+section ul li > div,
+section ul li > p {
   flex: 1;
   background-size: cover;
   background-position: center;
 }
-ul li > div {
+section ul li > div {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -36,26 +95,26 @@ ul li > div {
   text-align: center;
   color: #fff;
 }
-ul li > div h4 {
+section ul li > div h4 {
   font-family: "DM Sans", sans-serif;
 }
-ul li > div h1 {
+section ul li > div h1 {
   font-family: "scoredream";
   font-size: 37px;
 }
-ul li:nth-child(1) > div {
+section ul li:nth-child(1) > div {
   background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_G.png);
 }
-ul li:nth-child(2) > div {
+section ul li:nth-child(2) > div {
   background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_B.png);
 }
-ul li:nth-child(3) > div,
-ul li:nth-child(4) > div {
+section ul li:nth-child(3) > div,
+section ul li:nth-child(4) > div {
   background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_W.png);
   color: #06f;
 }
 
-ul li > div a {
+section ul li > div a {
   display: inline-block;
   margin-top: 20px;
   border: 1px solid #fff;
@@ -64,21 +123,144 @@ ul li > div a {
   color: #fff;
 }
 
-ul li:nth-child(3) > div a,
-ul li:nth-child(4) > div a {
+section ul li:nth-child(3) > div a,
+section ul li:nth-child(4) > div a {
   color: #06f;
   border-color: #06f;
 }
 
-ul li:nth-child(1) > p {
+section ul li:nth-child(1) > p {
   background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/sub1/bg2.png);
 }
-ul li:nth-child(2) > p {
+section ul li:nth-child(2) > p {
   background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/sub1/bg3.png);
 }
-ul li:nth-child(3) > p {
+section ul li:nth-child(3) > p {
   background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/sub1/bg4.png);
 }
-ul li:nth-child(4) > p {
+section ul li:nth-child(4) > p {
   background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/sub1/bg5.png);
+}
+/* 메인 섹션 끝 */
+/* 브랜드 로드 시작 */
+.brand {
+  background: #f1f1f1;
+  padding-top: 140px;
+  text-align: center;
+}
+.brand > h1 {
+  font-size: 40px;
+  font-weight: 500;
+  font-family: "DM Sans", sans-serif;
+}
+.brand .brand_inner {
+  margin: 0 auto;
+  margin-top: 100px;
+  border: 1px solid;
+  max-width: 1440px;
+  height: 1700px;
+  position: relative;
+  background: url(../images/bottom_img.png) no-repeat top;
+}
+
+.brand .brand_inner .txt_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: left;
+}
+
+.brand .brand_inner .one {
+  top: 2%;
+  left: 55%;
+}
+.brand .brand_inner .two {
+  top: 23%;
+  left: 47%;
+  text-align: right;
+}
+.brand .brand_inner .three {
+  top: 43%;
+  left: 25%;
+}
+.brand .brand_inner .four {
+  top: 50%;
+  left: 60%;
+  text-align: left;
+}
+.brand .brand_inner .five {
+  top: 72%;
+  left: 60%;
+  text-align: right;
+}
+.brand .brand_inner .six {
+  top: 92%;
+  left: 5%;
+}
+.brand .brand_inner .txt_box .txt > h4 {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "DM Sans", sans-serif;
+}
+.brand .brand_inner .txt_box .txt > p {
+  font-size: 14px;
+}
+
+/* 브랜드 로드 끝 */
+/* 푸터 */
+.footer {
+  background: #0e0c0c;
+  padding: 50px 180px;
+  color: #fff;
+  position: relative;
+}
+.footer > ul {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.footer > ul > li > a {
+  color: #fff;
+  font-size: 18px;
+}
+.footer p:first-of-type {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.footer p:last-of-type {
+  margin-bottom: 40px;
+}
+.footer .sns > ul {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  top: 50px;
+  right: 200px;
+}
+.footer .sns img {
+  width: 42px;
+  display: block;
+}
+.footer_logo img {
+  width: 213px;
+  margin: 0 auto;
+  display: block;
+}
+.footer .scroll_up {
+  position: absolute;
+  top: 60px;
+  right: 130px;
+  animation: upDown 1.1s linear 0s infinite alternate;
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
 }
