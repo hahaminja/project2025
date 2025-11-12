@@ -42,7 +42,7 @@ a {
 .wrap {
   font-family: "Noto Sans KR", sans-serif;
 }
-.header {
+.head {
   width: 100%;
   height: 100px;
   margin: 0 auto;
@@ -51,7 +51,7 @@ a {
   z-index: 999;
   background: #fff;
 }
-.header .inner {
+.head .inner {
   padding: 0 80px;
   width: 100%;
   height: 100%;
@@ -60,42 +60,41 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-.header .inner > a.logo {
+.head .inner > a.logo {
   width: 122px;
 }
-.header .inner > a.logo > img {
+.head .inner > a.logo > img {
   width: 100%;
   height: 100%;
 }
 
-.header .inner > .menu > ul {
+.head .inner > .menu > ul {
   display: flex;
-  border: 1px solid;
   width: 800px;
   justify-content: space-between;
 }
-.header .inner > .menu > ul > li > a {
+.head .inner > .menu > ul > li {
+  width: 120px;
+  text-align: left;
+}
+.head .inner > .menu > ul > li > a {
   font-size: 18px;
   font-weight: 500;
   color: #ff4713;
 }
+
 .sub_bg {
   position: absolute;
   left: 0;
   top: 100%;
   width: 100%;
-  height: 400px;
-  background: rgb(243, 215, 215);
-  border-top: 1px solid #ddd;
-  /* display: none; */
+  height: 300px;
+  background: #fff;
+  display: none;
 }
-.sub ul {
-  /* margin: 0 40px; */
-  width: 140px;
-}
+
 .sub {
   position: absolute;
-  border: 1px solid;
   width: 800px;
   justify-content: space-between;
   display: flex;
@@ -105,23 +104,32 @@ a {
   left: 50%;
   transform: translate(-60%, 0);
 }
+.sub ul li {
+  width: 120px;
+  text-align: left;
+}
 .sub ul li a {
   font-size: 18px;
   color: #ff4713;
   line-height: 40px;
 }
-.header .inner > .link {
+.head .inner > .link {
   display: flex;
   align-items: center;
 }
-.header .inner > .link > a:first-child {
+.head .inner > .link > a.fc_btn {
   background-color: #ff4713;
   color: #fff;
   padding: 7px 24px;
   border-radius: 20px;
   margin-right: 35px;
 }
-.header .inner > .link > a:nth-child(3) {
+.head .inner > .link > a.fc_btn.on {
+  color: #ff4713;
+  border: 1px solid #ff4713;
+  background-color: transparent;
+}
+.head .inner > .link > a:nth-child(3) {
   margin: 0 15px;
 }
 /* header 끝 */

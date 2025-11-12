@@ -22,12 +22,15 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <!-- Swiper JS -->
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   </head>
   <body>
     <div class="wrap">
       <header>
-        <div class="header">
+        <div class="head">
           <div class="inner">
             <a href="#" class="logo">
               <img src="./images/new_logo.png" alt="logo" />
@@ -66,7 +69,7 @@
               </div>
             </div>
             <div class="link">
-              <a href="#">창업안내</a>
+              <a href="#" class="fc_btn">창업안내</a>
               <a href="#">
                 <img src="./images/h-link-naver.svg" alt="naver" />
               </a>
@@ -400,6 +403,28 @@
     </div>
 
     <script>
+      //메뉴
+      // $(".menu > li").hover(function () {});
+      $(".menu > ul").hover(
+        function () {
+          $(".sub_bg").stop().slideDown(300);
+          $(".fc_btn").addClass("on");
+        },
+        function () {
+          $(".sub_bg").stop().slideUp(300);
+        }
+      );
+
+      $(".sub_bg").hover(
+        function () {
+          $(this).stop().slideDown(300);
+        },
+        function () {
+          $(this).stop().slideUp(300);
+          $(".fc_btn").removeClass("on");
+        }
+      );
+
       //비주얼 슬라이드
       var swiper = new Swiper(".mySwiper", {
         loop: true,
