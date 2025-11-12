@@ -478,7 +478,8 @@ section.sns_wrap > ul.sns_img > li {
   width: 20%;
 }
 section.sns_wrap > ul.sns_img > li > img {
-  width: 100%;
+  width: 381px;
+  height: 470px;
   object-fit: cover;
 }
 /* 인스타그램 끝*/
