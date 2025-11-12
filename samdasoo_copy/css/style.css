@@ -11,34 +11,35 @@ a {
 }
 header {
   width: 100vw;
-  position: fixed;
 }
 .header {
-  /* width: 1550px; */
+  /* width: 100%; */
+  position: fixed;
+  z-index: 100;
   margin: 0 auto;
   top: 0;
   height: 100px;
   padding-top: 50px;
-  position: relative;
 }
-.header > a:first-child {
+.header > a.logo {
   position: absolute;
   left: 180px;
+  z-index: 100;
 }
-.header > a > img {
+.header > a.logo > img {
   width: 213px;
   display: block;
-  z-index: 9999;
 }
 .header .open_btn {
-  position: absolute;
+  position: relative;
   top: 55px;
-  right: 200px;
+  right: 100%;
   display: block;
   width: 30px;
   height: 30px;
   background: url(../images/menu_b.png) no-repeat center center;
   background-size: 100%;
+  border: 1px solid rebeccapurple;
 }
 
 /* 버튼 메뉴 */
@@ -47,18 +48,28 @@ header {
   height: 100%;
   background: url(../images/bg_B.png);
   position: fixed;
-  left: 0;
+  right: -100%;
   top: 0;
   overflow: hidden;
-  z-index: 999;
-  display: none;
+  z-index: 90;
+  transition: 1s;
+  transition: right 0.8s;
+}
+.menu_inner.on {
+  right: 0;
+}
+.menu_inner .close_btn {
+  position: absolute;
+  z-index: 90;
+  width: 50px;
+  height: 50px;
+  border: 1px solid red;
+  top: 55px;
+  right: 200px;
 }
 .menu_inner span.material-symbols-outlined {
   color: #fff;
   font-size: 40px;
-  position: absolute;
-  top: 55px;
-  right: 200px;
 }
 .menu_inner > .menu_wrap ul {
   position: absolute;
