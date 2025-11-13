@@ -30,10 +30,10 @@ header {
   width: 213px;
   display: block;
 }
-.header .open_btn {
+.header > .open_btn {
   position: relative;
   top: 55px;
-  right: 100%;
+  right: left;
   display: block;
   width: 30px;
   height: 30px;
