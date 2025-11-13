@@ -15,6 +15,9 @@
       src="https://kit.fontawesome.com/b6d41ceb36.js"
       crossorigin="anonymous"
     ></script>
+    <!-- AOS 애니메이션 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css" />
     <!-- 제이쿼리 -->
@@ -29,22 +32,33 @@
           /></a>
           <div class="btn_wrap">
             <div class="lan">
-              <a href="#">KOR<i class="fa-solid fa-angle-down"></i></a>
+              <a href="#" class="kor"
+                >KOR<i class="fa-solid fa-angle-down"></i
+              ></a>
+              <div class="lan_inner">
+                <a href="#">ENG</a>
+                <a href="#">CHN</a>
+              </div>
             </div>
             <a href="#" class="open_btn"></a>
-            <div class="close_btn">
-              <a href="#"
-                ><span class="material-symbols-outlined"> close </span></a
-              >
-            </div>
           </div>
         </div>
       </header>
       <!-- 버튼 클릭시 메뉴 -->
       <div class="menu_inner">
         <div class="menu_wrap">
+          <div>
+            <a href="#" class="logo"
+              ><img src="./images/foot_logo.png" alt="logo"
+            /></a>
+            <div class="close_btn">
+              <a href="#"
+                ><span class="material-symbols-outlined"> close </span></a
+              >
+            </div>
+          </div>
           <ul>
-            <li><a href="#">STORY </a></li>
+            <li><a href="./samdasoo_story.html">STORY </a></li>
             <li><a href="#"> GREEN </a></li>
             <li><a href="#">NEWS </a></li>
             <li><a href="#">FAQ </a></li>
@@ -56,7 +70,7 @@
 
       <section>
         <div class="txt">
-          <p>
+          <p data-aos="fade-down">
             <strong>THE WATER</strong> <br />
             깨끗하고, 건강하고, 맛있는 물
           </p>
@@ -72,7 +86,7 @@
       </section>
       <section>
         <div class="txt">
-          <p>
+          <p data-aos="fade-down" data-aos-delay="800" data-aos-duration="1200">
             <strong>ONLY ONE </strong> <br />
             진정한 제주다움 실현
           </p>
@@ -88,7 +102,7 @@
       </section>
       <section>
         <div class="txt">
-          <p>
+          <p data-aos="fade-down" data-aos-delay="800" data-aos-duration="1200">
             <strong>SUSTAINABLE </strong> <br />
             제주의 청정 자연과 공존하는 제주삼다수
           </p>
@@ -106,7 +120,12 @@
         <img src="./images/new_samdasoo.png" alt="samdasoo" />
       </p>
       <div class="sns_content">
-        <div class="sns_title">
+        <div
+          class="sns_title"
+          data-aos="fade-down"
+          data-aos-delay="800"
+          data-aos-duration="1200"
+        >
           <p>
             무려 106개의 관측망이 <br />
             <span>한 눈 팔지 않고</span> 지키는 물
@@ -155,19 +174,26 @@
       </footer>
     </div>
     <script>
-      // $(function () {
-      //   // 메뉴 열기
-      //   $(".open_btn").on("click", function () {
-      //     $(".menu_inner").addClass("on");
-      //     $(".logo > img ").attr("src", "./images/foot_logo.png");
-      //   });
+      //KOR버튼
+      $(".kor").click(function (e) {
+        e.preventDefault();
+        $(".lan_inner").stop().slideToggle(500);
+      });
 
-      //   // 메뉴 닫기
-      //   $(".close_btn").on("click", function () {
-      //     $(".menu_inner").removeClass("on");
-      //     $(".logo > img ").attr("src", "./images/logo.png");
-      //   });
-      // });
+      $(function () {
+        // 메뉴 열기
+        $(".open_btn").on("click", function () {
+          $(".menu_inner").addClass("on");
+        });
+
+        // 메뉴 닫기
+        $(".close_btn").on("click", function () {
+          $(".menu_inner").removeClass("on");
+          $(this).css("transform", "rotate(45deg)");
+        });
+      });
+      //AOS
+      AOS.init();
     </script>
   </body>
 </html>

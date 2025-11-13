@@ -173,8 +173,9 @@ section ul li:nth-child(4) > p {
 /* 브랜드 로드 시작 */
 .brand {
   background: #f1f1f1;
-  padding-top: 140px;
   text-align: center;
+  padding-top: 140px;
+  padding-bottom: 200px;
 }
 .brand > h1 {
   font-size: 40px;
@@ -182,11 +183,14 @@ section ul li:nth-child(4) > p {
   font-family: "DM Sans", sans-serif;
 }
 .brand .brand_inner {
+  margin-top: 125px;
+}
+.brand_inner .brand_img {
+  position: relative;
   margin: 0 auto;
-  margin-top: 100px;
+  position: relative;
   max-width: 1440px;
   height: 1700px;
-  position: relative;
   background: url(../images/bottom_img.png) no-repeat top;
 }
 
@@ -232,7 +236,9 @@ section ul li:nth-child(4) > p {
 .brand .brand_inner .txt_box .txt > p {
   font-size: 14px;
 }
-
+.brand .bookLink {
+  margin-top: 80px;
+}
 /* 브랜드 로드 끝 */
 /* 푸터 */
 .footer {
