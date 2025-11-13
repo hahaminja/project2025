@@ -30,6 +30,10 @@ header {
   width: 213px;
   display: block;
 }
+.header .btn_wrap {
+  display: flex;
+  gap: 30px;
+}
 .header .btn_wrap .lan > a {
   font-size: 18px;
   font-weight: bold;
@@ -58,10 +62,6 @@ header {
 .header .btn_wrap .lan > .lan_inner > a {
   display: block;
   padding: 7px 10px;
-}
-.header .btn_wrap {
-  display: flex;
-  gap: 30px;
 }
 .header .open_btn {
   display: block;

@@ -21,37 +21,33 @@ a {
 /* 메뉴 */
 header {
   width: 100vw;
-  position: fixed;
-  z-index: 999;
 }
 .header {
-  /* width: 1550px; */
-  margin: 0 auto;
-  top: 0;
+  width: 100%;
   height: 100px;
-  padding-top: 15px;
-  position: relative;
-  background: rgba(255, 255, 255, 0.8);
+  padding: 0 180px;
+  position: fixed;
+  top: 0;
+  z-index: 9;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  background: rgba(255, 255, 255, 0.8);
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
 }
-.header > a:first-child {
-  position: absolute;
-  left: 180px;
-}
+
 .header > a > img {
   width: 213px;
   display: block;
-  z-index: 9999;
 }
+
 .header nav ul {
   display: flex;
-  gap: 20px;
+  gap: 2rem;
 }
 .header nav ul li a {
   font-size: 18px;
+  font-weight: 700;
   display: block;
   padding: 10px 15px;
 }
@@ -60,19 +56,45 @@ header {
   text-decoration: none;
   padding-bottom: 7px;
 }
-
-/* .header .open_btn {
+.header .menu_right {
+  display: flex;
+  gap: 10rem;
+}
+.header .menu_right .lan {
+  align-self: center;
+}
+.header .menu_right .lan > a {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 3px;
+}
+.header .menu_right .lan i.fa-solid {
+  margin-left: 5px;
+  font-size: 12px;
+}
+.header .menu_right .lan {
+  position: relative;
+}
+.header .menu_right .lan > .lan_inner {
   position: absolute;
-  top: 55px;
-  right: 200px;
+  top: 25px;
+  left: -5px;
+  text-align: center;
+  border-radius: 7px;
+  background-color: #d4d4d4;
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  overflow: hidden;
+  display: none;
+}
+.header .menu_right .lan > .lan_inner > a {
   display: block;
-  width: 30px;
-  height: 30px;
-  background: url(../images/menu_b.png) no-repeat center center;
-  background-size: 100%;
-} */
-/* 메뉴 */
-/* 상단 비주얼 */
+  padding: 7px 10px;
+}
+
+/* 메뉴 끝*/
+/* 상단 */
 .visual {
   width: 100%;
   height: 100vh;
