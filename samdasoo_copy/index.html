@@ -5,13 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>제주삼다수copy</title>
-    <link rel="stylesheet" href="./css/style.css" />
     <!-- 구글 아이콘 -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close"
     />
-
+    <!-- 폰트어썸 -->
+    <script
+      src="https://kit.fontawesome.com/b6d41ceb36.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
     <!-- 제이쿼리 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   </head>
@@ -22,14 +27,21 @@
           <a href="#" class="logo"
             ><img src="./images/logo.png" alt="logo"
           /></a>
-          <a href="#" class="open_btn"></a>
+          <div class="btn_wrap">
+            <div class="lan">
+              <a href="#">KOR<i class="fa-solid fa-angle-down"></i></a>
+            </div>
+            <a href="#" class="open_btn"></a>
+            <div class="close_btn">
+              <a href="#"
+                ><span class="material-symbols-outlined"> close </span></a
+              >
+            </div>
+          </div>
         </div>
       </header>
       <!-- 버튼 클릭시 메뉴 -->
       <div class="menu_inner">
-        <div class="close_btn">
-          <a href="#"><span class="material-symbols-outlined"> close </span></a>
-        </div>
         <div class="menu_wrap">
           <ul>
             <li><a href="#">STORY </a></li>
@@ -143,21 +155,19 @@
       </footer>
     </div>
     <script>
-      $(function () {
-        // 메뉴 열기
-        $(".open_btn").on("click", function () {
-          $(".menu_inner").addClass("on");
-          $(".logo > img ").attr("src", "./images/foot_logo.png");
-          $(".open_btn").hide();
-        });
+      // $(function () {
+      //   // 메뉴 열기
+      //   $(".open_btn").on("click", function () {
+      //     $(".menu_inner").addClass("on");
+      //     $(".logo > img ").attr("src", "./images/foot_logo.png");
+      //   });
 
-        // 메뉴 닫기
-        $(".close_btn").on("click", function () {
-          $(".menu_inner").removeClass("on");
-          $(".logo > img ").attr("src", "./images/logo.png");
-          $(".open_btn").show();
-        });
-      });
+      //   // 메뉴 닫기
+      //   $(".close_btn").on("click", function () {
+      //     $(".menu_inner").removeClass("on");
+      //     $(".logo > img ").attr("src", "./images/logo.png");
+      //   });
+      // });
     </script>
   </body>
 </html>

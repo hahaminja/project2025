@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 ul {
   list-style: none;
@@ -10,36 +11,57 @@ a {
   color: #000;
 }
 header {
-  width: 100vw;
+  width: 100%;
 }
 .header {
-  /* width: 100%; */
-  position: fixed;
-  z-index: 100;
-  margin: 0 auto;
-  top: 0;
+  width: 100%;
   height: 100px;
-  padding-top: 50px;
-}
-.header > a.logo {
-  position: absolute;
-  left: 180px;
+  padding: 50px 180px 0;
+  position: fixed;
+  top: 0;
   z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rebeccapurple;
 }
+
 .header > a.logo > img {
   width: 213px;
   display: block;
 }
-.header > .open_btn {
-  position: relative;
-  top: 55px;
-  right: left;
+.header .btn_wrap {
+  display: flex;
+  gap: 30px;
+}
+
+.header .open_btn {
   display: block;
   width: 30px;
   height: 30px;
   background: url(../images/menu_b.png) no-repeat center center;
   background-size: 100%;
+}
+/* .header > .open_btn {
+  position: relative;
+  top: 55px;
+  right: left;
+ 
   border: 1px solid rebeccapurple;
+} */
+.close_btn {
+  position: absolute;
+  z-index: 90;
+  width: 50px;
+  height: 50px;
+  border: 1px solid red;
+  top: 55px;
+  right: 200px;
+  display: none;
+}
+.close_btn .material-symbols-outlined {
+  color: #fff;
+  font-size: 40px;
 }
 
 /* 버튼 메뉴 */
@@ -58,19 +80,7 @@ header {
 .menu_inner.on {
   right: 0;
 }
-.menu_inner .close_btn {
-  position: absolute;
-  z-index: 90;
-  width: 50px;
-  height: 50px;
-  border: 1px solid red;
-  top: 55px;
-  right: 200px;
-}
-.menu_inner span.material-symbols-outlined {
-  color: #fff;
-  font-size: 40px;
-}
+
 .menu_inner > .menu_wrap ul {
   position: absolute;
   left: 22%;
