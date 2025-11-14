@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제주삼다수copy</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      body {
+        background: #ccc;
+        height: 2000px;
+      }
+      nav {
+        width: 1200px;
+        margin: 0 auto;
+        height: 100px;
+        /* left: 50%;
+        transform: translateX(-50%); */
+        border-radius: 20px;
+        /* transition: 1s; */
+        /* background: #f00; */
+      }
+      nav.on {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #fff;
+      }
+      nav ul {
+        display: flex;
+      }
+    </style>
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $(window).on("wheel", function () {
+          let ht = $(window).scrollTop();
+          //
+          //console.log(e.originalEvent.deltaY);
+          let delta = event.wheelDelta;
+          //마우스를 내리면 -120 마우스를 올리면 120
+          console.log(delta);
+          if (delta > 0) {
+            $("nav").addClass("on");
+            if (ht == 0) {
+              $("nav").removeClass("on");
+            }
+          } else {
+            $("nav").removeClass("on");
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="">메뉴1</a></li>
+        <li><a href="">메뉴1</a></li>
+        <li><a href="">메뉴1</a></li>
+        <li><a href="">메뉴1</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

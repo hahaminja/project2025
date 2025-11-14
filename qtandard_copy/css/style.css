@@ -22,26 +22,26 @@ header {
   top: 50px;
   z-index: 99;
 }
-.head {
+.header_inner {
   width: 1785px;
   margin: 0 auto;
   background-color: #efefef;
   display: flex;
   justify-content: space-between;
 }
-.head a {
+.header_inner a {
   font-size: 20px;
 }
-.logo {
+.header_inner .logo {
   font-size: 22px;
   font-weight: 700;
   line-height: 1;
 }
-.head > nav ul {
+.header_inner > nav ul {
   display: flex;
   gap: 2rem;
 }
-.head > div:last-child {
+.header_inner > div:last-child {
   display: flex;
 }
 
