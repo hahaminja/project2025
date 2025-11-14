@@ -10,41 +10,96 @@ a {
   text-decoration: none;
   color: #000;
 }
-.con_wrap {
-  margin: 20px;
-  font-family: "Fahkwang", sans-serif;
-}
+
 header {
   font-family: "Fahkwang", sans-serif;
+  /* padding: 0 1.3rem; */
+  padding: 0 3rem;
+  border-radius: 1rem;
+  z-index: 500;
+  position: absolute;
+  left: 0;
   width: 100%;
-  margin: 0 auto;
-  position: fixed;
-  top: 50px;
-  z-index: 99;
+  border: 1px solid pink;
 }
+
 .header_inner {
-  width: 1785px;
-  margin: 0 auto;
-  background-color: #efefef;
+  border: 1px solid rgb(224, 86, 86);
+  height: 94px;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+header.on {
+  position: fixed;
+  background-color: rgb(250, 250, 250);
 }
 .header_inner a {
   font-size: 20px;
+}
+.header_inner .logo_wrap {
+  display: flex;
+  gap: 0.4rem;
 }
 .header_inner .logo {
   font-size: 22px;
   font-weight: 700;
   line-height: 1;
 }
+.header_inner i {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #222;
+  border-radius: 50%;
+  animation: blur 6s linear 0s infinite;
+}
+@keyframes blur {
+  0% {
+    filter: blur(0.2px);
+  }
+
+  50% {
+    filter: blur(5px);
+  }
+  100% {
+    filter: blur(0.2px);
+  }
+}
 .header_inner > nav ul {
   display: flex;
-  gap: 2rem;
+  gap: 2.4rem;
 }
-.header_inner > div:last-child {
+.header_inner > nav ul li a {
+  font-weight: 700;
+}
+.header_inner > .login {
   display: flex;
+  align-items: center;
+  gap: 2.2rem;
 }
-
+.header_inner > .login > a:first-of-type {
+  display: block;
+  font-weight: 700;
+  /* border-bottom: 1px solid; */
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 1px;
+}
+.header_inner > .login > a:last-of-type {
+  display: block;
+  padding: 0 2.25rem;
+  border-radius: 0.4rem;
+  line-height: 3.2rem;
+  background: #000;
+  color: #fff;
+  font-weight: 700;
+}
+.con_wrap {
+  margin: 20px;
+  font-family: "Fahkwang", sans-serif;
+}
 .main_visual {
   height: 90vh;
   /* padding: 165rem 0 150rem; */
@@ -56,4 +111,7 @@ header {
   border-radius: 1.5rem;
   overflow: hidden;
   background-color: #ddd;
+}
+section {
+  height: 1000px;
 }
