@@ -28,12 +28,12 @@
           //마우스를 내리면 -120 마우스를 올리면 120
           console.log(delta);
           if (delta > 0) {
-            $("header").addClass("on");
+            $(".header_inner").addClass("on");
             if (ht == 0) {
-              $("header").removeClass("on");
+              $(".header_inner").removeClass("on");
             }
           } else {
-            $("header").removeClass("on");
+            $(".header_inner").removeClass("on");
           }
         });
       });

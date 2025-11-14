@@ -15,25 +15,30 @@ header {
   font-family: "Fahkwang", sans-serif;
   /* padding: 0 1.3rem; */
   padding: 0 3rem;
-  border-radius: 1rem;
-  z-index: 500;
   position: absolute;
   left: 0;
   width: 100%;
-  border: 1px solid pink;
+  top: 20px;
+  z-index: 1;
 }
 
 .header_inner {
-  border: 1px solid rgb(224, 86, 86);
+  border-radius: 1rem;
+  /* width: 100%; */
   height: 94px;
   padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 5;
 }
-header.on {
+.header_inner.on {
   position: fixed;
+  top: 20px;
   background-color: rgb(250, 250, 250);
+  left: 3rem; /* 부모 padding-left 값 */
+  right: 3rem;
+  width: auto;
 }
 .header_inner a {
   font-size: 20px;
