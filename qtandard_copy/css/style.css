@@ -36,9 +36,12 @@ header {
   position: fixed;
   top: 20px;
   background-color: rgb(250, 250, 250);
-  left: 3rem; /* 부모 padding-left 값 */
+  /* left: 3rem; 
   right: 3rem;
-  width: auto;
+  width: auto; */
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 6rem);
 }
 .header_inner a {
   font-size: 20px;
