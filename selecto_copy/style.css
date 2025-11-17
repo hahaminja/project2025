@@ -342,10 +342,8 @@ div.marquee_wrap {
   height: 100%;
   overflow: hidden;
   padding: 30px 0;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
   border-bottom: 1px solid #ff4713;
+  white-space: nowrap;
 }
 div.marquee_wrap .marquee_txt {
   font-size: 36px;
