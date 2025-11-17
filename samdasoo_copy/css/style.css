@@ -10,6 +10,9 @@ a {
   text-decoration: none;
   color: #000;
 }
+html {
+  scroll-behavior: smooth;
+}
 header {
   width: 100%;
 }
@@ -67,7 +70,9 @@ header {
   display: block;
   width: 30px;
   height: 30px;
-  background: url(../images/menu_b.png) no-repeat center center;
+  background-image: url(../images/menu_b.png);
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: 100%;
 }
 
@@ -184,28 +189,27 @@ section:nth-of-type(3) {
   transform: translate(-50%, -50%);
   z-index: 10;
 }
-section p:last-child {
-  position: relative;
-  z-index: 20;
-}
 
-.sns_content {
-  height: 918px;
+section.sns_content {
+  height: 1000px;
   background-image: url(../images/bg4.jpg);
   background-position: center 30%;
-  /* background-size: cover; */
   text-align: center;
-  padding: 330px 180px 90px;
+  position: relative;
 }
-.sns_title p:first-child {
+section.sns_content > .sns_title {
+  position: absolute;
+  top: 250px;
+}
+section.sns_content .sns_title p:first-child {
   font-size: 37px;
   line-height: 50px;
   margin-bottom: 20px;
 }
-.sns_title span {
+section.sns_content .sns_title span {
   color: #0066ff;
 }
-.sns_title p:last-child {
+section.sns_content .sns_title p:last-child {
   font-size: 18px;
   line-height: 1.5;
 }
