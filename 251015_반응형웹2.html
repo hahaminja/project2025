@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      section {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      section ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2vw;
+      }
+      section ul li {
+        background-color: #ccc;
+        flex: 1 0 40%;
+        /* height: 300px; */
+        padding-top: 50%;
+        background-size: cover;
+      }
+      section ul li:nth-child(1) {
+        background-image: url(https://i.pinimg.com/736x/f0/1a/2b/f01a2b4e7f4ac75dd45dd5c55690259a.jpg);
+      }
+      section ul li:nth-child(2) {
+        background-image: url(https://i.pinimg.com/736x/f8/b1/bd/f8b1bdf545f2b77267dad924494ded2d.jpg);
+      }
+      section ul li:nth-child(3) {
+        background-image: url(https://i.pinimg.com/1200x/e9/9f/60/e99f603404caa32bed6377b34d4de792.jpg);
+      }
+      section ul li:nth-child(4) {
+        background-image: url(https://i.pinimg.com/736x/8f/46/38/8f46380d6421823e3369e4fbb1d842f7.jpg);
+      }
+      /* @media screen and (max-width: 1024px) {
+        section ul li {
+          height: 200px;
+        }
+      } */
+    </style>
+  </head>
+  <body>
+    <section>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </section>
+  </body>
+</html>
