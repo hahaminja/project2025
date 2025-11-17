@@ -188,6 +188,7 @@ section:nth-of-type(3) {
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
+  transition: opacity 0.4s ease;
 }
 
 section.sns_content {
