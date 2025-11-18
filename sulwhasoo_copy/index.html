@@ -148,6 +148,18 @@
                 <h1>A Holiday of unexpected delight</h1>
               </div>
             </div>
+            <div class="swiper-slide">
+              <p>
+                <img
+                  src="./images/251104_final_KR_HolidayCollection_main_KV_PC.jpg"
+                  alt="bg1"
+                />
+              </p>
+              <div class="slide_txt">
+                <p>Happy Holiday</p>
+                <h1>A Holiday of unexpected delight</h1>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -164,10 +176,10 @@
         function () {
           let ht = $(this).find(".sub > ul").height();
           console.log(ht);
-          $(this).find(".sub").height(ht).addClass("on");
+          $(this).find(".sub").height(ht).addClass("show");
         },
         function () {
-          $(".menu > ul > li").find(".sub").height(0).removeClass("on");
+          $(".menu > ul > li").find(".sub").height(0).removeClass("show");
         }
       );
 
@@ -190,13 +202,13 @@
         }
       );
       //비주얼 슬라이드
-      // var swiper = new Swiper(".mySwiper", {
-      //   loop: true,
-      //   autoplay: {
-      //     delay: 2500,
-      //     disableOnInteraction: false,
-      //   },
-      // });
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
     </script>
   </body>
 </html>
