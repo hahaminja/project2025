@@ -154,8 +154,8 @@ header {
 .flex_wrap > div {
   display: flex;
   gap: 1.25rem;
-  height: 95vh;
-  max-height: 100%;
+  /* height: 95vh; */
+  /* max-height: 100%; */
   margin-top: 1.25rem;
 }
 .flex_wrap > div:nth-child(even) {
@@ -163,7 +163,9 @@ header {
 }
 .flex_wrap > div > div {
   border-radius: 1.5rem;
-  width: 50%;
+  /* width: 50%; */
+  flex: 1 1 50%;
+  aspect-ratio: 1 / 1;
   background: #efefef;
   overflow: hidden;
 }
@@ -199,7 +201,7 @@ header {
   width: 100%;
   height: 100%;
   /* display: block; */
-  /* object-fit: contain; */
+  object-fit: cover;
 }
 .item_circle {
   display: flex;
