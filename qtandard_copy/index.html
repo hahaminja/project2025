@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Qtandard copy</title>
+    <title>Qtandard</title>
     <!-- 구글폰트 Fahkwang -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,9 +13,14 @@
       rel="stylesheet"
     />
     <!-- 파비콘 -->
-
+    <link
+      rel="icon"
+      href="https://qtandard.com/wp-content/uploads/2024/02/cropped-favicon-32x32.png"
+      sizes="32x32"
+    />
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media.css" />
     <!-- 제이쿼리 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   </head>
@@ -35,14 +40,33 @@
           </ul>
         </nav>
         <div class="login">
-          <a href="#">Log in</a>
-          <a href="#">Create</a>
+          <a href="#" class="log_in">Log in</a>
+          <a href="#" class="create">Create</a>
+        </div>
+        <div class="menu_btn"><a href="#">Menu</a></div>
+      </div>
+      <div class="header_mo">
+        <div class="close_btn"><a href="#">Close</a></div>
+        <nav>
+          <ul>
+            <li><a href="#">Showcase</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </nav>
+        <div class="login_m">
+          <a href="#" class="log_in_m">Log in</a>
+          <a href="#" class="create_m">Create</a>
         </div>
       </div>
     </header>
     <div class="con_wrap">
       <div class="main_banner">
-        <div class="inner_bg"></div>
+        <div class="inner_bg">
+          <p class="inner_bg_color"></p>
+          <p class="inner_bg_color"></p>
+          <p class="inner_bg_color"></p>
+        </div>
         <div class="inner_txt">
           <h1>
             AI website generator <br />
@@ -133,7 +157,7 @@
       <footer>
         <div class="foot_wrap">
           <div class="foot_top">
-            <i></i>
+            <div><i></i></div>
             <ul>
               <li><a href="#">Privacy</a></li>
               <li><a href="#"> Terms</a></li>
@@ -156,6 +180,7 @@
     </div>
 
     <script>
+      //스크롤이벤트
       $(function () {
         $(window).on("wheel", function () {
           let ht = $(window).scrollTop();
@@ -173,6 +198,18 @@
             $(".header_inner").removeClass("on");
           }
         });
+      });
+
+      //모바일 메뉴
+      $(".menu_btn").click(function () {
+        $(".header_mo").addClass("on");
+        $(".con_wrap").css({ display: "none" });
+        $(this).hide();
+      });
+      $(".close_btn").click(function () {
+        $(".header_mo").removeClass("on");
+        $(".con_wrap").css({ display: "block" });
+        $(".menu_btn").show();
       });
     </script>
   </body>
