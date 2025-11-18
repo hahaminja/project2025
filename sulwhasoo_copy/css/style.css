@@ -27,7 +27,6 @@ header {
   left: 0;
   top: 0;
   z-index: 9;
-  /* display: none; */
   transition: 0.5s;
 }
 
@@ -56,13 +55,12 @@ nav.menu > ul > li > a.on {
 }
 
 .header .header_top {
-  display: flex;
   max-width: 1100px;
   height: 78px;
   margin: 0 auto;
   position: relative;
-  z-index: 10;
-  padding: 10px 5% 0;
+  padding: 10px 2% 0;
+  display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
