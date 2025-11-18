@@ -26,24 +26,45 @@ header {
   position: absolute;
   left: 0;
   top: 0;
-  background: #efefef;
   z-index: 9;
   /* display: none; */
 }
+
+header.on {
+  background: #fff;
+}
+.header_top .lan > a,
+.links > a,
+nav.menu > ul > li > a {
+  color: #fff;
+}
+
+.header_top .lan > a.on,
+.links > a.on,
+nav.menu > ul > li > a.on {
+  color: #000;
+}
+.header_top .lan img,
+.links > a > img {
+  filter: invert(100%);
+}
+.header_top .lan img.on,
+.links > a > img.on {
+  filter: invert(0%);
+}
 .header {
-  background: #efefef;
-  width: 1100px;
   border: 1px solid;
-  margin: 0 auto;
-  position: relative;
-  z-index: 10;
 }
 .header .header_top {
   display: flex;
+  max-width: 1100px;
   height: 78px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  padding: 10px 5% 0;
   justify-content: space-between;
   align-items: flex-start;
-  padding-top: 10px;
 }
 .header .header_top .lan {
   position: relative;
@@ -52,11 +73,12 @@ header {
   font-size: 15px;
   height: 100%;
 }
+
 .header .header_top .lan img {
   display: inline-block;
   margin-left: 5px;
 }
-.header .header_top .lan img.on {
+.header .header_top .lan img.active {
   transform: rotate(180deg);
 }
 .lan_inner {
@@ -64,13 +86,23 @@ header {
   position: absolute;
   left: 0;
   top: 30px;
+  background: #fff;
+}
+.lan_inner.on {
+  display: block;
+}
+.lan_inner > ul {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  padding: 10px 0;
 }
 .lan_inner > ul li a {
   width: 100%;
+  padding: 5px 10px;
   font-size: 13px;
-  display: inline-block;
-  line-height: 1.5;
-  padding: 0 20px;
+  display: block;
 }
 .lan_inner > ul li:hover a {
   background: #eee;
@@ -101,11 +133,12 @@ header {
 .header .header_top .links > a:last-child::after {
   content: "";
 }
+
 /* nav 메뉴 시작 */
 .header nav {
   height: 44px;
 }
-.header nav.menu ul {
+.header nav.menu > ul {
   height: 100%;
   display: flex;
   justify-content: center;
@@ -113,7 +146,38 @@ header {
   gap: 2.2vw;
 }
 
+header nav.menu > ul > li a {
+  padding-bottom: 8.5px;
+}
+header nav.menu > ul > li:hover > a {
+  border-bottom: 2px solid;
+}
 /* nav 메뉴 끝 */
+/* 서브메뉴 */
+.sub {
+  position: absolute;
+  left: 0;
+  top: 124px;
+  width: 100%;
+  background: #efefef;
+  opacity: 0;
+}
+.sub.on {
+  opacity: 1;
+}
+.sub > ul {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
+.sub > ul h4,
+.sub > ul a {
+  font-size: 15px;
+  line-height: 2;
+  color: #888;
+}
 /* 비주얼 슬라이드 */
 .visual_con {
   position: relative;

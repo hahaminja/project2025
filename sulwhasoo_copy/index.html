@@ -33,9 +33,12 @@
                 >한국/한국어<img
                   src="./images/hd_black_arr_b_220902.png"
                   alt="하단화살표"
-              /></a>
+                />
+              </a>
+
               <div class="lan_inner">
                 <ul>
+                  <li><a href="#">한국/한국어</a></li>
                   <li><a href="#">International/English</a></li>
                   <li><a href="#">中文</a></li>
                   <li><a href="#">繁體中文</a></li>
@@ -70,10 +73,61 @@
               <li><a href="#"> 자음생</a></li>
               <li><a href="#"> 기프트</a></li>
               <li><a href="#"> 베스트 셀러</a></li>
-              <li><a href="#"> 제품</a></li>
-              <li><a href="#"> 스파</a></li>
-              <li><a href="#">플래그십 스토어</a></li>
-              <li><a href="#">ABOUT 설화수</a></li>
+              <li>
+                <a href="#"> 제품</a>
+                <div class="sub">
+                  <ul>
+                    <li><a href="#">스킨케어</a></li>
+                    <li><a href="#">메이크업</a></li>
+                    <li><a href="#">남성</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#"> 스파</a>
+                <div class="sub">
+                  <ul>
+                    <li><a href="#">소개</a></li>
+                    <li><a href="#">스파 프로그램</a></li>
+                    <li><a href="#">예약</a></li>
+                    <li><a href="#">매장 찾기</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#">플래그십 스토어</a>
+                <div class="sub">
+                  <ul>
+                    <li><a href="#">플래그십 스토어</a></li>
+                    <li><a href="#">설화수 북촌</a></li>
+                    <li><a href="#">설화수 도산</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#">ABOUT 설화수</a>
+                <div class="sub">
+                  <ul>
+                    <li><a href="#">브랜드 스토리</a></li>
+                    <li>
+                      <h4>브랜드 지속가능성</h4>
+                      <ul>
+                        <li>
+                          <a href="#">지속가능성</a>
+                        </li>
+                        <li>
+                          <a href="#">위조품방지</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a href="#">설화 문화전</a></li>
+                    <li><a href="#">살롱 설화수</a></li>
+                    <li><a href="#">컬처 프로젝트</a></li>
+                    <li><a href="#">브랜드 뉴스</a></li>
+                    <li><a href="#">명작 컬렉션</a></li>
+                  </ul>
+                </div>
+              </li>
             </ul>
           </nav>
         </div>
@@ -99,14 +153,50 @@
       </div>
     </div>
     <script>
-      //비주얼 슬라이드
-      var swiper = new Swiper(".mySwiper", {
-        loop: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
+      //언어
+      $(".lan").click(function () {
+        $(".lan_inner").toggleClass("on");
+        $(".lan img").toggleClass("active");
       });
+
+      //메뉴
+      $(".menu > ul > li").hover(
+        function () {
+          let ht = $(this).find(".sub > ul").height();
+          console.log(ht);
+          $(this).find(".sub").height(ht).addClass("on");
+        },
+        function () {
+          $(".menu > ul > li").find(".sub").height(0).removeClass("on");
+        }
+      );
+
+      $("header").hover(
+        function () {
+          $(this).addClass("on");
+          $(".header_top .lan > a").addClass("on");
+          $(".links > a").addClass("on");
+          $("nav.menu > ul > li > a").addClass("on");
+          $(".header_top .lan img").addClass("on");
+          $(".links > a > img").addClass("on");
+        },
+        function () {
+          $(this).removeClass("on");
+          $(".header_top .lan > a").removeClass("on");
+          $(".links > a").removeClass("on");
+          $("nav.menu > ul > li > a").removeClass("on");
+          $(".header_top .lan img").removeClass("on");
+          $(".links > a > img").removeClass("on");
+        }
+      );
+      //비주얼 슬라이드
+      // var swiper = new Swiper(".mySwiper", {
+      //   loop: true,
+      //   autoplay: {
+      //     delay: 2500,
+      //     disableOnInteraction: false,
+      //   },
+      // });
     </script>
   </body>
 </html>
