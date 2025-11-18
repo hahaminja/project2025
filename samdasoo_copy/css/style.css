@@ -95,6 +95,9 @@ header {
 .menu_wrap {
   padding: 50px 180px 0;
 }
+.menu_wrap > div > a {
+  display: inline-block;
+}
 .menu_wrap .close_btn {
   position: absolute;
   top: 55px;
