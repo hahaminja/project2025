@@ -1,5 +1,5 @@
 /* 구글폰트 DM serif */
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap");
 /* 눈누 프리텐다드 */
 @font-face {
   font-family: "Pretendard";
@@ -8,6 +8,19 @@
   font-weight: 400;
   font-display: swap;
 }
+/* DM 세리프 */
+.dm-serif-text-regular {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-serif-text-regular-italic {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,18 +33,84 @@ a {
   text-decoration: none;
   color: #000;
 }
-.dm-serif-display-regular {
-  font-family: "DM Serif Display", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.dm-serif-display-regular-italic {
-  font-family: "DM Serif Display", serif;
-  font-weight: 400;
-  font-style: italic;
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 /* 시작 */
-.section1 {
+.header {
+  position: fixed;
+  width: 100%;
   background: #efefef;
+}
+.header_inner {
+  margin: 0 auto;
+  max-width: 1550px;
+  padding: 0 5%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header nav ul {
+  display: flex;
+  gap: 3vw;
+}
+
+.section1 {
+  position: relative;
+}
+
+.txt_wrap {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 22%;
+  /* height: 100vh; */
+}
+.section1 .txt_wrap .inner {
+  font-family: "DM Serif Text";
+}
+.section1 .inner .txt_t {
+  position: relative;
+  left: -5%;
+  bottom: -5%;
+  z-index: 1;
+}
+.section1 .inner .txt_b {
+  position: relative;
+  right: -10%;
+  top: -15%;
+}
+.section1 .inner p {
+  /* font-size: 10vw; */
+  font-size: 180px;
+  letter-spacing: -2px;
+}
+
+.section1 span {
+  display: inline-block;
+}
+.section1 .txt_t span.to {
+  color: #007aff;
+}
+.section1 .txt_b span.beyond {
+  -webkit-text-stroke: 3px #007aff;
+  color: transparent;
+  /* font-style: italic; */
+}
+.shape {
+  position: absolute;
+  top: 12%;
+  left: 38%;
+  width: 22vw;
+}
+.shape img {
+  width: 100%;
+  object-fit: cover;
+}
+.bottom {
+  background: #ddd;
 }
