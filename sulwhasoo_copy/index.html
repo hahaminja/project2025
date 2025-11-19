@@ -20,6 +20,12 @@
     />
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- 파비콘 -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./images/sulwhasoo-favicon_250220.ico"
+    />
     <!-- 제이쿼리 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   </head>
@@ -139,10 +145,7 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <p>
-                <img
-                  src="./images/251104_final_KR_HolidayCollection_main_KV_PC.jpg"
-                  alt="bg1"
-                />
+                <img src="./images/slide_bg_1.jpg" alt="bg1" />
               </p>
               <div class="slide_txt">
                 <p>Happy Holiday</p>
@@ -151,10 +154,7 @@
             </div>
             <div class="swiper-slide">
               <p>
-                <img
-                  src="./images/251104_final_KR_HolidayCollection_main_KV_PC.jpg"
-                  alt="bg1"
-                />
+                <img src="./images/slide_bg_2.jpg" alt="bg2" />
               </p>
               <div class="slide_txt">
                 <p>스스로 탄력을 채워 모든 시간을 밀도 있게</p>
@@ -163,14 +163,38 @@
             </div>
             <div class="swiper-slide">
               <p>
-                <img
-                  src="./images/251104_final_KR_HolidayCollection_main_KV_PC.jpg"
-                  alt="bg1"
-                />
+                <img src="./images/slide_bg_3.jpg" alt="bg3" />
               </p>
               <div class="slide_txt">
                 <p>'자생력을' 강화하여 노화 근본부터 케어</p>
                 <h1>홀리스틱 스캐너 서비스</h1>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <p>
+                <img src="./images/slide_bg_4.jpg" alt="자음생클렌징폼" />
+              </p>
+              <div class="slide_txt">
+                <p>세안 단계부터 깨어나는 피부 자생력</p>
+                <h1>자음생클렌징폼</h1>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <p>
+                <img src="./images/slide_bg_5.jpg" alt="윤조에센스" />
+              </p>
+              <div class="slide_txt">
+                <p>다시 윤빛 도는 피부</p>
+                <h1>윤조에센스</h1>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <p>
+                <img src="./images/slide_bg_6.jpg" alt="홀리데이" />
+              </p>
+              <div class="slide_txt">
+                <p>AMORE MALL (11/17~11/30)</p>
+                <h1>홀리데이 에디션 출시</h1>
               </div>
             </div>
           </div>
@@ -199,6 +223,10 @@
       $("header").hover(
         function () {
           $(this).addClass("on");
+          $(".logo img").attr(
+            "src",
+            "./images/sulwhasoo_logo-amber_250224.png"
+          );
           $(".header_top .lan > a").addClass("on");
           $(".links > a").addClass("on");
           $("nav.menu > ul > li > a").addClass("on");
@@ -207,6 +235,10 @@
         },
         function () {
           $(this).removeClass("on");
+          $(".logo img").attr(
+            "src",
+            "./images/sulwhasoo_white_logo_220902.png"
+          );
           $(".header_top .lan > a").removeClass("on");
           $(".links > a").removeClass("on");
           $("nav.menu > ul > li > a").removeClass("on");
