@@ -193,7 +193,10 @@ section:nth-of-type(3) {
   z-index: 10;
   transition: opacity 0.4s ease;
 }
-
+section .p_img {
+  position: relative;
+  z-index: 11;
+}
 section.sns_content {
   height: 1000px;
   background-image: url(../images/bg4.jpg);
