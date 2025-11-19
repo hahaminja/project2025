@@ -43,9 +43,9 @@ body {
 .header {
   position: fixed;
   width: 100%;
-  background: #efefef;
 }
 .header_inner {
+  font-family: "Pretendard";
   margin: 0 auto;
   max-width: 1550px;
   padding: 0 5%;
