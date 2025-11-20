@@ -63,8 +63,14 @@ body {
 .header nav ul li a {
   color: #fff;
 }
+.header nav ul li:hover a {
+  font-style: italic;
+  color: #bb86fc;
+}
 .section {
   background: #222;
+  font-family: "Pretendard";
+  color: #fff;
 }
 .section1 .con {
   position: relative;
@@ -79,7 +85,7 @@ body {
   display: flex;
   justify-content: center;
   position: relative;
-  top: 28%;
+  top: 14vw;
 }
 .section1 .txt_center .inner {
   font-family: "DM Serif Text";
@@ -96,7 +102,6 @@ body {
   top: -3%;
 }
 .section1 .txt_center .inner p {
-  /* font-size: 10vw; */
   font-size: 180px;
   letter-spacing: -2px;
   color: #fff;
@@ -118,8 +123,8 @@ body {
 /* 메인 애니 */
 .party {
   position: absolute;
-  top: 30%;
-  left: 42%;
+  top: 31%;
+  left: 45%;
   width: 500px;
   height: 300px;
 }
@@ -156,4 +161,23 @@ body {
   justify-content: space-between;
   display: flex;
   color: #fff;
+}
+/* 섹션2 */
+.section2 .con2 {
+  max-width: 1240px;
+  margin: 0 auto;
+  height: 100vh;
+  padding: 0 2%;
+  border: 1px solid rosybrown;
+}
+.section2 .con2 .con2_inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+.section2 .con2 .con2_inner > div {
+  border: 1px solid wheat;
+  flex: 1;
 }
