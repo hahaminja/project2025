@@ -202,11 +202,16 @@ body {
   text-transform: uppercase;
   letter-spacing: 1.2px;
 }
+.experience_list > .list_con {
+  gap: 30px;
+}
+.cer_list > .list_con > span {
+  margin-right: 10px;
+}
 .list_con {
   display: flex;
   flex-wrap: wrap;
   margin-top: 5px;
-  gap: 30px;
   font-size: clamp(14px, 2vw, 16px);
 }
 .list.edu_list > .list_con,
@@ -313,7 +318,7 @@ body {
   width: 100%;
   height: 600px;
   display: none;
-  opacity: 1;
+  opacity: 0.8;
 }
 .mobile_bg img {
   width: 100%;
@@ -329,6 +334,14 @@ body {
   color: #fff;
 }
 @media screen and (max-width: 500px) {
+  .section1 .txt_center .inner p {
+    font-size: 150px;
+  }
+
+  .party {
+    left: 5%;
+  }
+
   .header_inner {
     justify-content: center;
   }
