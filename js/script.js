@@ -7,7 +7,7 @@ $(document).ready(function () {
   });
 });
 
-//메인 별 애니메이션
+//랜딩페이지 커버 메인 별 애니메이션
 const path = document.querySelector("#path1");
 const img = document.querySelector("#partyImg");
 
@@ -38,3 +38,12 @@ function animateImage() {
 }
 
 animateImage(); // 애니메이션 시작
+
+//work 스와이퍼 슬라이드
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});

@@ -121,6 +121,7 @@ body {
 }
 
 /* 메인 애니 */
+
 .party {
   position: absolute;
   top: 31%;
@@ -167,15 +168,16 @@ body {
   max-width: 1240px;
   margin: 0 auto;
   height: 100vh;
-  padding: 0 2%;
-  border: 1px solid rosybrown;
 }
 .con2_wrap {
   display: flex;
-  padding: 10% 0;
+  align-items: center;
+  padding: 5% 3%;
+  height: 100%;
 }
 .con2_wrap > div {
-  flex: 1 0 50%;
+  flex: 1;
+  border: 1px solid indianred;
 }
 .section2 .con2 .con2_wrap .left {
   display: flex;
@@ -183,16 +185,19 @@ body {
   gap: 40px;
 }
 .section2 .con2 .con2_wrap .left .hello {
-  margin-bottom: 50px;
+  margin-bottom: 2vw;
 }
 .section2 .con2 .con2_wrap .left .hello > p {
-  font-size: 40px;
+  /* font-size: 40px; */
+  font-size: clamp(38px, 2vw, 50px);
+  word-break: keep-all;
 }
 .section2 .con2 .con2_wrap .left .hello span {
   color: #bb86fc;
 }
 .section2 .con2 .con2_wrap .list .title {
-  font-size: 22px;
+  /* font-size: 22px; */
+  font-size: clamp(18px, 2vw, 22px);
   color: #bb86fc;
   text-transform: uppercase;
   letter-spacing: 1.2px;
@@ -202,6 +207,7 @@ body {
   flex-wrap: wrap;
   margin-top: 5px;
   gap: 30px;
+  font-size: clamp(14px, 2vw, 16px);
 }
 .list.edu_list > .list_con,
 .list.sk_list > .list_con {
@@ -219,9 +225,15 @@ body {
 .list.sk_list .list_con p:nth-child(6) {
   background: rgba(255, 255, 255, 0.9);
 }
-.list.sk_list .list_con img {
+/* .list.sk_list .list_con img {
   width: 100%;
   object-fit: cover;
+} */
+.list.sk_list .list_con > span {
+  display: inline-block;
+  padding: 3px 5px;
+  border: 1px solid #fff;
+  border-radius: 3px;
 }
 /* 프로필 */
 .section2 .con2 .con2_wrap .right {
@@ -239,19 +251,81 @@ body {
 }
 
 .section2 .con2 .con2_wrap .right .right_title > p {
-  font-size: 200px;
+  /* font-size: 10vw; */
+  font-size: clamp(120px, 15vw, 200px);
   text-align: right;
   line-height: 0.6;
   color: #bb86fc;
   font-family: "DM Serif Text";
-  margin-bottom: 80px;
+  position: relative;
+  top: 10px;
+  z-index: 1;
 }
-.section2 .con2 .con2_wrap .right .right_title span {
-  font-size: 1.2em;
+.section2 .con2 .con2_wrap .right .right_title p span {
+  font-size: clamp(120px, 15vw, 200px);
   -webkit-text-stroke: 3px #bb86fc;
   color: transparent;
 }
 .section2 .con2 .con2_wrap .right .prifile > p {
   margin-bottom: 2px;
   color: #777;
+}
+
+/* work 스와이퍼 슬라이드 */
+.swiper {
+  overflow: hidden;
+}
+.slide_con {
+  position: relative;
+  top: 10%;
+  padding: 0 5%;
+}
+.slide_item {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+}
+
+.slide_con h1 {
+  font-size: clamp(70px, 5vw, 100px);
+  color: #ddd;
+  position: absolute;
+  line-height: 1.1;
+  z-index: 1;
+  text-align: center;
+}
+.mockup_img {
+  position: absolute;
+  top: 100px;
+}
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mobile_bg {
+  height: 500px;
+  display: none;
+  opacity: 0.5;
+}
+.mobile_bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 500px) {
+  .mobile_bg {
+    display: block;
+  }
+  .mockup_img {
+    width: 90%;
+    position: absolute;
+    top: 400px;
+  }
+  .slide_con h1 {
+    top: 30px;
+  }
 }
