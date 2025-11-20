@@ -329,6 +329,12 @@ body {
   color: #fff;
 }
 @media screen and (max-width: 500px) {
+  .header_inner {
+    justify-content: center;
+  }
+  .m_none {
+    display: none;
+  }
   .slide_item {
     justify-content: space-between;
   }
@@ -340,9 +346,9 @@ body {
   }
   .mockup_img {
     position: absolute;
-    top: 400px;
+    top: 350px;
   }
   .slide_con h1 {
-    top: 30px;
+    top: 150px;
   }
 }
