@@ -10,6 +10,17 @@
     display: block;
   }
 
+  .header_inner.on {
+    height: 80px;
+  }
+  .main_banner > .inner_txt {
+    gap: 3vw;
+  }
+  .main_banner > .inner_txt a.start_btn {
+    padding: 2% 10%;
+    font-size: 20px;
+  }
+
   .foot_wrap .foot_top ul {
     grid-gap: 0 80px;
   }
@@ -18,7 +29,7 @@
     min-height: 70vmax;
   }
   .main_banner > .inner_txt h1 {
-    font-size: 2.5vw;
+    font-size: 6vw;
   }
 }
 
