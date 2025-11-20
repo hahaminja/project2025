@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .partyWrap {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .party {
+        position: relative;
+        width: 500px;
+        height: 300px;
+      }
+
+      .party svg {
+        width: 100%;
+        border: 1px solid;
+        height: 100%;
+      }
+
+      .st0 {
+        fill: none;
+        stroke: #bb86fc;
+        stroke-width: 4;
+      }
+      .party img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px; /* 이미지 크기 조정 */
+        height: auto;
+        pointer-events: none;
+        transition: transform 5s linear;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="partyWrap">
+      <div class="party">
+        <svg>
+          <path
+            class="st0"
+            id="path1"
+            d="M426.2,245.9c-6,11.9-17.4,20.5-33.2,25.8c-15.8,5.3-36,7.2-59.1,5.7c-46.2-3-103.9-19.5-162.2-48.9
+            c-58.2-29.4-105.8-66.1-135.6-101.5C21.2,109.2,10.8,91.9,5.7,76c-5.1-15.9-5-30.2,1-42c6-11.9,17.4-20.5,33.2-25.8
+            C55.8,2.9,75.9,1,99,2.5c46.2,3,103.9,19.5,162.2,48.9c58.2,29.4,105.8,66.1,135.6,101.5c14.9,17.7,25.3,35.1,30.5,50.9
+            C432.3,219.8,432.2,234,426.2,245.9z"
+          />
+        </svg>
+        <p><img src="./images/Party.svg" alt="party" id="partyImg" /></p>
+      </div>
+    </div>
+
+    <script>
+      const path = document.querySelector("#path1");
+      const img = document.querySelector("#partyImg");
+
+      // SVG 경로의 총 길이를 구합니다.
+      const pathLength = path.getTotalLength();
+
+      // 이미지가 경로를 따라 움직이게 할 함수
+      function animateImage() {
+        let progress = 0;
+
+        // 애니메이션 주기
+        function move() {
+          progress += 0.003; // 한 번의 애니메이션에서 이동할 비율 애니메이션 속도 조절
+          if (progress > 1) progress = 0; // 경로 끝에 도달하면 처음으로 되돌아갑니다.
+
+          // 경로에서 현재 위치에 대한 좌표를 구합니다.
+          const point = path.getPointAtLength(progress * pathLength);
+
+          // 경로 상의 좌표 (x, y)로 이미지를 이동
+          img.style.left = `${point.x - img.width / 2}px`; // 이미지의 중심을 경로에 맞추기 위해 -img.width/2
+          img.style.top = `${point.y - img.height / 2}px`; // 이미지의 중심을 경로에 맞추기 위해 -img.height/2
+
+          // 계속 애니메이션을 반복
+          requestAnimationFrame(move);
+        }
+
+        move();
+      }
+
+      animateImage(); // 애니메이션 시작
+    </script>
+  </body>
+</html>

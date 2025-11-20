@@ -43,6 +43,7 @@ body {
 .header {
   position: fixed;
   width: 100%;
+  z-index: 99;
 }
 .header_inner {
   font-family: "Pretendard";
@@ -53,14 +54,23 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #fff;
 }
 .header nav ul {
   display: flex;
   gap: 3vw;
 }
+.header nav ul li a {
+  color: #fff;
+}
 
-.section1 {
+.section1 .con {
   position: relative;
+  background: #222;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
 }
 
 .txt_wrap {
@@ -68,7 +78,6 @@ body {
   justify-content: center;
   position: relative;
   top: 22%;
-  /* height: 100vh; */
 }
 .section1 .txt_wrap .inner {
   font-family: "DM Serif Text";
@@ -88,16 +97,17 @@ body {
   /* font-size: 10vw; */
   font-size: 180px;
   letter-spacing: -2px;
+  color: #fff;
 }
 
 .section1 span {
   display: inline-block;
 }
 .section1 .txt_t span.to {
-  color: #007aff;
+  color: #bb86fc;
 }
 .section1 .txt_b span.beyond {
-  -webkit-text-stroke: 3px #007aff;
+  -webkit-text-stroke: 3px #bb86fc;
   color: transparent;
   /* font-style: italic; */
 }
@@ -111,6 +121,16 @@ body {
   width: 100%;
   object-fit: cover;
 }
-.bottom {
-  background: #ddd;
+.txt_bottom {
+  width: 100%;
+}
+.txt_bottom .bt_inner {
+  margin: 0 auto;
+  height: 50px;
+  padding: 0 5%;
+  max-width: 1550px;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  color: #fff;
 }
