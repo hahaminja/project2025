@@ -63,7 +63,9 @@ body {
 .header nav ul li a {
   color: #fff;
 }
-
+.section {
+  background: #222;
+}
 .section1 .con {
   position: relative;
   background: #222;
@@ -72,12 +74,12 @@ body {
   height: 100vh;
   justify-content: space-between;
 }
-
+/* 센터 텍스트 이동 시 */
 .txt_center {
   display: flex;
   justify-content: center;
   position: relative;
-  top: 22%;
+  top: 28%;
 }
 .section1 .txt_center .inner {
   font-family: "DM Serif Text";
@@ -110,28 +112,20 @@ body {
 .section1 .txt_center .inner .txt_b span.beyond {
   -webkit-text-stroke: 3px #bb86fc;
   color: transparent;
-  /* font-style: italic; */
+  font-style: italic;
 }
 
-.partyWrap {
-  /* width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center; */
-}
 /* 메인 애니 */
 .party {
   position: absolute;
-  top: 23%;
-  left: 38%;
+  top: 30%;
+  left: 42%;
   width: 500px;
   height: 300px;
 }
 
 .party svg {
   width: 100%;
-  border: 1px solid;
   height: 100%;
 }
 
@@ -149,17 +143,7 @@ body {
   pointer-events: none;
   transition: transform 5s linear;
 }
-/* 메인 애니 */
-/* .shape {
-  position: absolute;
-  top: 12%;
-  left: 38%;
-  width: 22vw;
-}
-.shape img {
-  width: 100%;
-  object-fit: cover;
-} */
+
 .txt_bottom {
   width: 100%;
 }
