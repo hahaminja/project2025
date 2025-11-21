@@ -81,12 +81,13 @@ body {
   justify-content: space-between;
   /* justify-content: flex-end; */
 }
-/* 센터 텍스트 이동 시 */
 .txt_center {
   display: flex;
   justify-content: center;
   position: relative;
   top: 14vw;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .section1 .txt_center .inner {
   font-family: "DM Serif Text";
