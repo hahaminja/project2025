@@ -38,18 +38,19 @@ html.fp-enabled,
 }
 .fp-section.fp-table,
 .fp-slide.fp-table {
-  /* display: table; */
-  display: block !important;
+  display: table;
+  /* display: block !important; */
   table-layout: fixed;
   width: 100%;
 }
 .fp-tableCell {
-  display: block !important; /* table-cell → block */
+  /* table-cell → block */
+  /* display: block !important; 
   width: auto !important;
-  height: 100% !important;
-  /* display: table-cell;
+  height: 100% !important; */
+  display: table-cell;
   vertical-align: middle;
-  width: 100%; */
+  width: 100%;
 }
 .fp-slidesContainer {
   float: left;

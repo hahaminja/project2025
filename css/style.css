@@ -103,6 +103,7 @@ body {
 }
 .section1 .txt_center .inner p {
   font-size: 180px;
+
   letter-spacing: -2px;
   color: #fff;
   line-height: 1;
@@ -121,11 +122,17 @@ body {
 }
 
 /* 메인 애니 */
-
-.party {
+.partyWrap {
   position: absolute;
+  /* width: 95%; */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.party {
+  /* position: absolute;
   top: 31%;
-  left: 45%;
+  left: 45%; */
   width: 500px;
   height: 300px;
 }
@@ -333,21 +340,41 @@ body {
   text-align: center;
   color: #fff;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1280px) {
   .section1 .txt_center .inner p {
-    font-size: 150px;
+    font-size: 15vw;
   }
-
-  .party {
-    left: 5%;
+}
+@media screen and (max-width: 1024px) {
+  .section1 .con {
+    height: auto;
   }
-
-  .header_inner {
-    justify-content: center;
+  .section2 .con2 {
+    height: auto;
   }
+  .con2_wrap {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
   .m_none {
     display: none;
   }
+  .header_inner {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* .section1 .txt_center .inner p {
+    font-size: 150px;
+  } */
+  .partyWrap {
+    width: 95%;
+  }
+  .party {
+    transform: scale(0.8);
+  }
+
   .slide_item {
     justify-content: space-between;
   }

@@ -3,6 +3,7 @@ $(document).ready(function () {
     autoScrolling: true,
     // scrollHorizontally: true,
     // anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+    responsiveWidth: 1024,
     scrollingSpeed: 1000,
   });
 });
