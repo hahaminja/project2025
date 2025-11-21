@@ -43,6 +43,8 @@ animateImage(); // 애니메이션 시작
 //work 스와이퍼 슬라이드
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
+  centeredSlides: true,
+  // loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
