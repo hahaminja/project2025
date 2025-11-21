@@ -79,6 +79,7 @@ body {
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
+  /* justify-content: flex-end; */
 }
 /* 센터 텍스트 이동 시 */
 .txt_center {
@@ -103,15 +104,12 @@ body {
 }
 .section1 .txt_center .inner p {
   font-size: 180px;
-
   letter-spacing: -2px;
   color: #fff;
   line-height: 1;
+  word-break: keep-all;
 }
 
-.section1 .txt_center .inner span {
-  display: inline-block;
-}
 .section1 .txt_center .inner .txt_t span.to {
   color: #bb86fc;
 }
@@ -120,7 +118,9 @@ body {
   color: transparent;
   font-style: italic;
 }
-
+.d_block {
+  display: none;
+}
 /* 메인 애니 */
 .partyWrap {
   position: absolute;
@@ -159,6 +159,7 @@ body {
 
 .txt_bottom {
   width: 100%;
+  align-self: flex-end;
 }
 .txt_bottom .bt_inner {
   margin: 0 auto;
@@ -184,7 +185,6 @@ body {
 }
 .con2_wrap > div {
   flex: 1;
-  border: 1px solid indianred;
 }
 .section2 .con2 .con2_wrap .left {
   display: flex;
@@ -339,56 +339,4 @@ body {
 .desc_txt {
   text-align: center;
   color: #fff;
-}
-@media screen and (max-width: 1280px) {
-  .section1 .txt_center .inner p {
-    font-size: 15vw;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .section1 .con {
-    height: auto;
-  }
-  .section2 .con2 {
-    height: auto;
-  }
-  .con2_wrap {
-    flex-direction: column;
-  }
-}
-@media screen and (max-width: 768px) {
-  .m_none {
-    display: none;
-  }
-  .header_inner {
-    justify-content: center;
-  }
-}
-@media screen and (max-width: 500px) {
-  /* .section1 .txt_center .inner p {
-    font-size: 150px;
-  } */
-  .partyWrap {
-    width: 95%;
-  }
-  .party {
-    transform: scale(0.8);
-  }
-
-  .slide_item {
-    justify-content: space-between;
-  }
-  .img_wrap {
-    width: 100%;
-  }
-  .mobile_bg {
-    display: block;
-  }
-  .mockup_img {
-    position: absolute;
-    top: 350px;
-  }
-  .slide_con h1 {
-    top: 150px;
-  }
 }
