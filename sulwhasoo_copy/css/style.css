@@ -31,8 +31,13 @@ header {
 }
 
 header.on {
-  transition: 0.5s;
   background: #fff;
+}
+.header_top {
+  padding-top: 2%;
+}
+.header_top > div > a {
+  font-size: 15px;
 }
 .header_top .lan > a,
 .links > a,
@@ -40,17 +45,18 @@ nav.menu > ul > li > a {
   color: #fff;
 }
 
-.header_top .lan > a.on,
-.links > a.on,
-nav.menu > ul > li > a.on {
+header.on .header_top .lan > a,
+header.on .links > a,
+header.on nav.menu > ul > li > a {
   color: #000;
 }
+
 .header_top .lan img,
 .links > a > img {
   filter: invert(100%);
 }
-.header_top .lan img.on,
-.links > a > img.on {
+header.on .header_top .lan img,
+header.on .links > a > img {
   filter: invert(0%);
 }
 .header {
@@ -141,9 +147,11 @@ nav.menu > ul > li > a.on {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2.2vw;
+  /* position: relative; */
 }
-
+.header nav.menu > ul > li {
+  padding: 0 20px;
+}
 header nav.menu > ul > li > a {
   padding: 12px 0;
   height: 100%;
@@ -155,22 +163,23 @@ header nav.menu > ul > li > a:hover {
 }
 /* nav 메뉴 끝 */
 /* 서브메뉴 */
-.sub {
+
+.header nav.menu > ul > li .sub {
   position: absolute;
   left: 0;
-  top: 122px;
+  top: 100%;
   width: 100%;
-  background: #aaa;
-  opacity: 0;
   overflow: hidden;
-  z-index: -1;
+  height: 0;
+  transition: 0.5s;
+  z-index: 1;
 }
 .sub.show {
   transition: 0.5s;
-  opacity: 1;
 }
 .sub > ul {
   background: #fff;
+  border-top: 1px solid #888;
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -186,14 +195,7 @@ header nav.menu > ul > li > a:hover {
 .visual_con {
   position: relative;
 }
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-.swiper-slide {
-  height: 100%;
-  background: #000;
-}
+
 .slide_txt {
   position: absolute;
   color: #fff;
@@ -209,3 +211,108 @@ header nav.menu > ul > li > a:hover {
   height: 100%;
   object-fit: cover;
 }
+/* 커스텀 버튼 */
+button {
+  border: none;
+}
+button > img {
+  display: block;
+}
+.swiper_btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  opacity: 0.4;
+}
+.swiper_btn.prev {
+  left: 0;
+}
+.swiper_btn.next {
+  right: 0;
+}
+/* 설화수 추천 */
+.con {
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+.con > h1 {
+  font-size: 28px;
+  padding: 0 0 20px;
+}
+
+.section_recom {
+  margin-top: 120px;
+}
+.recom_ltem > a > div > p {
+  position: relative;
+}
+.item_txt {
+  text-align: center;
+}
+.item_txt .txt_name {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 23px;
+}
+.item_txt .txt_body {
+  font-size: 16px;
+  color: #888;
+  padding: 2px 0 14px;
+  font-weight: 400;
+  letter-spacing: -0.9px;
+}
+.item_txt .txt_price {
+  font-weight: 500;
+  font-style: 16px;
+}
+.section_recom .swiper2_btn {
+  position: absolute;
+  top: 35%;
+  z-index: 2;
+  opacity: 0.3;
+}
+
+.section_recom .swiper2_btn.prev {
+  left: 0;
+}
+.section_recom .swiper2_btn.next {
+  right: 0;
+}
+section.bestseller {
+  width: 100%; /* 화면에 맞게 */
+  max-width: 1440px; /* 최대폭 제한 */
+  margin: 0 auto;
+  position: relative;
+}
+
+.bestseller_inner {
+  width: 100%;
+  padding-top: 37.5%;
+  background-image: url(/sulwhasoo_copy/images/sulwhasoo_main_bestseller_pc_kr_250902.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.best_seller_txt {
+  position: absolute;
+  left: 12%;
+  bottom: 15%;
+  color: #fff;
+}
+.best_seller_txt > h1 {
+  font-size: 32px;
+}
+.best_seller_txt > .bs_txt_body {
+  font-size: 18px;
+  margin-top: 12px;
+}
+.best_seller_txt > .bs_txt_btn {
+  font-size: 14px;
+  color: #fff;
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: 1px solid #fff;
+}
+/* 설화수 시즌 추천 */

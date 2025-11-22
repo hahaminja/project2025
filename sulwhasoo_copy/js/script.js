@@ -1,5 +1,6 @@
 //언어
-$(".lan").click(function () {
+$(".lan > a").click(function (e) {
+  e.preventDefault();
   $(".lan_inner").toggleClass("on");
   $(".lan img").toggleClass("active");
 });
@@ -20,20 +21,10 @@ $("header").hover(
   function () {
     $(this).addClass("on");
     $(".logo img").attr("src", "./images/sulwhasoo_logo-amber_250224.png");
-    $(".header_top .lan > a").addClass("on");
-    $(".links > a").addClass("on");
-    $("nav.menu > ul > li > a").addClass("on");
-    $(".header_top .lan img").addClass("on");
-    $(".links > a > img").addClass("on");
   },
   function () {
     $(this).removeClass("on");
     $(".logo img").attr("src", "./images/sulwhasoo_white_logo_220902.png");
-    $(".header_top .lan > a").removeClass("on");
-    $(".links > a").removeClass("on");
-    $("nav.menu > ul > li > a").removeClass("on");
-    $(".header_top .lan img").removeClass("on");
-    $(".links > a > img").removeClass("on");
   }
 );
 //비주얼 슬라이드
@@ -43,4 +34,25 @@ var swiper = new Swiper(".mySwiper", {
     delay: 2500,
     disableOnInteraction: false,
   },
+  navigation: {
+    nextEl: ".swiper_btn.next",
+    prevEl: ".swiper_btn.prev",
+  },
 });
+//설화수 추천 슬라이드
+var swiper2 = new Swiper(".mySwiper2", {
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 30,
+
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper_btn.next",
+    prevEl: ".swiper_btn.prev",
+  },
+});
+// AOS애니메이션
+AOS.init();
