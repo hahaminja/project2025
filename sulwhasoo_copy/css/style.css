@@ -290,7 +290,7 @@ section.bestseller {
 .bestseller_inner {
   width: 100%;
   padding-top: 37.5%;
-  background-image: url(/sulwhasoo_copy/images/sulwhasoo_main_bestseller_pc_kr_250902.jpg);
+  background-image: url(/sulwhasoo_copy/images/sulwhasoo_main_bestseller_pc_kr_251105.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -310,9 +310,44 @@ section.bestseller {
 }
 .best_seller_txt > .bs_txt_btn {
   font-size: 14px;
-  color: #fff;
+  background-color: transparent;
   margin-top: 10px;
   padding: 10px 15px;
   border: 1px solid #fff;
+  color: #fff;
 }
 /* 설화수 시즌 추천 */
+.season_list {
+  margin-top: 120px;
+  padding: 0 12px;
+}
+.season_list_item {
+  border: 1px solid;
+  width: 100%;
+  display: flex;
+  gap: 1.2vw;
+  flex-wrap: nowrap;
+}
+.item {
+  flex: 1 1 0;
+  background-color: #ededed;
+  position: relative;
+}
+.item:nth-child(2) {
+  flex-grow: 2;
+}
+.item .season_img {
+}
+.item .season_img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.season_txt.ab_txt {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.season_txt.center_txt {
+  text-align: center;
+}
