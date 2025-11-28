@@ -38,6 +38,11 @@ var swiper = new Swiper(".mySwiper", {
     nextEl: ".swiper_btn.next",
     prevEl: ".swiper_btn.prev",
   },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    hide: false,
+    draggable: true,
+  },
 });
 //설화수 추천 슬라이드
 var swiper2 = new Swiper(".mySwiper2", {
@@ -50,8 +55,8 @@ var swiper2 = new Swiper(".mySwiper2", {
     disableOnInteraction: false,
   },
   navigation: {
-    nextEl: ".swiper_btn.next",
-    prevEl: ".swiper_btn.prev",
+    nextEl: ".swiper2_btn.next",
+    prevEl: ".swiper2_btn.prev",
   },
 });
 // AOS애니메이션

@@ -31,7 +31,7 @@
     <!-- 제이쿼리 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   </head>
-  <body>
+  <body id="top">
     <div class="wrap">
       <header>
         <div class="header">
@@ -150,14 +150,8 @@
                 <img src="./images/slide_bg_1.jpg" alt="bg1" />
               </p>
               <div class="slide_txt">
-                <p data-aos="fade-up" data-aos-duration="500">Happy Holiday</p>
-                <h1
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                  data-aos-duration="500"
-                >
-                  A Holiday of unexpected delight
-                </h1>
+                <p>Happy Holiday</p>
+                <h1>A Holiday of unexpected delight</h1>
               </div>
             </div>
             <div class="swiper-slide">
@@ -206,6 +200,7 @@
               </div>
             </div>
           </div>
+
           <!-- 커스텀 btn-->
           <button class="swiper_btn prev">
             <img src="./images/main-arr-l.png" alt="이전 버튼" />
@@ -213,6 +208,18 @@
           <button class="swiper_btn next">
             <img src="./images/main-arr-r.png" alt="다음 버튼" />
           </button>
+          <div class="controls">
+            <!-- 슬라이드 바 -->
+            <div class="swiper-scrollbar"></div>
+            <div class="playStop">
+              <div class="play">
+                <img src="./images/sulwhasoo_main_play.png" alt="재생" />
+              </div>
+              <div class="stop">
+                <img src="./images/sulwhasoo_main_stop.png" alt="정지" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- 설화수 추천 -->
@@ -425,6 +432,97 @@
           </div>
         </div>
       </section>
+      <section class="store">
+        <div class="con">
+          <div class="store_inner">
+            <div class="store_inner_list">
+              <p>
+                <img
+                  src="./images/store_bukchon_708x600.jpg"
+                  alt="북촌스토어"
+                />
+              </p>
+              <div class="store_txt">
+                <p>설화수 북촌 플래그십 스토어</p>
+                <p>자세히보기</p>
+              </div>
+            </div>
+            <div class="store_inner_list">
+              <p>
+                <img src="./images/store_dosan.jpg" alt="도산 스토어" />
+              </p>
+              <div class="store_txt">
+                <p>설화수 도산 플래그십 스토어</p>
+                <p>자세히보기</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="footer_top">
+          <div class="footer_con">
+            <div class="footer_info">
+              <ul>
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#"> 서비스이용약관 </a></li>
+                <li><a href="#">개인정보처리방침 </a></li>
+                <li><a href="#">영상정보처리방침 </a></li>
+                <li><a href="#">사이트맵 </a></li>
+                <li><a href="#"> 로그인 </a></li>
+                <li><a href="#"> 위조품 방지 </a></li>
+              </ul>
+            </div>
+            <div class="footer_sns">
+              <ul>
+                <li>
+                  <a href="#" class="mark"
+                    ><img
+                      src="./images/sws-wa-mark_kr_250115.png"
+                      alt="웹접근성"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="./images/facebookLogo.png" alt="facebookLogo"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="./images/instaLogo.png" alt="instaLogo"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="./images/youtubeLogo.png" alt="youtubeLogo"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="./images/kakaoChannelLogo.png"
+                      alt="kakaoChannelLogo"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer_bt">
+          <div class="footer_con">
+            <p>
+              고객서비스센터(수신자요금부담) : 080-023-5454 (월~금: AM 09:00~PM
+              06:00)
+            </p>
+            <p>© AMOREPACIFIC CORPORATION. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+      <div class="go_top_btn">
+        <a href="#" id="top">
+          <img src="./images/top.png" alt="상단버튼" />
+        </a>
+      </div>
     </div>
     <script src="./js/script.js"></script>
   </body>

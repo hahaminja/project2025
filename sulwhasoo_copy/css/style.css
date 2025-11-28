@@ -1,3 +1,5 @@
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+
 @font-face {
   font-family: "MinSans";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Regular.woff")
@@ -5,6 +7,9 @@
   font-weight: normal;
   font-display: swap;
 }
+
+/* font-family: 'NanumBarunGothicLight';
+font-family: 'NanumBarunGothic'; */
 
 * {
   margin: 0;
@@ -18,8 +23,12 @@ a {
   text-decoration: none;
   color: #000;
 }
+html,
+body {
+  scroll-behavior: smooth;
+}
 .wrap {
-  font-family: "MinSans";
+  font-family: "NanumBarunGothicLight";
 }
 header {
   width: 100%;
@@ -60,14 +69,13 @@ header.on .links > a > img {
   filter: invert(0%);
 }
 .header {
+  width: 95%;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 7%;
-  /* border: 1px solid red; */
 }
 .header .header_top {
-  height: 78px;
   position: relative;
+  height: 78px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -123,6 +131,10 @@ header.on .links > a > img {
   display: block;
   width: 166px;
 }
+.header .header_top .links {
+  display: flex;
+  align-items: center;
+}
 .header .header_top .links > a {
   display: inline-block;
   padding: 0 15px;
@@ -134,7 +146,7 @@ header.on .links > a > img {
   right: 0;
 }
 .header .header_top .links > a:last-child img {
-  vertical-align: top;
+  vertical-align: middle;
 }
 .header .header_top .links > a:last-child::after {
   content: "";
@@ -231,6 +243,40 @@ button > img {
 .swiper_btn.next {
   right: 0;
 }
+/* 스와이퍼 스크롤바 */
+.controls {
+  position: absolute;
+  left: 13%;
+  bottom: 20%;
+  display: flex;
+  gap: 10px;
+  border: 1px solid rgb(202, 202, 223);
+}
+.swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: static;
+  background-color: transparent;
+  border: 1px solid #fff;
+  width: 420px;
+  height: 4px;
+  border-radius: 0;
+}
+.swiper-scrollbar-drag {
+  background-color: #fff;
+}
+.controls .playStop {
+  z-index: 99;
+}
+.controls .playStop > div {
+  position: absolute;
+  top: -3px;
+}
+.controls .playStop > div.play {
+  display: none;
+}
+.controls .playStop > div img {
+  display: block;
+}
 /* 설화수 추천 */
 .con {
   max-width: 1440px;
@@ -253,7 +299,7 @@ button > img {
 }
 .item_txt .txt_name {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   margin-top: 23px;
 }
 .item_txt .txt_body {
@@ -322,7 +368,6 @@ section.bestseller {
   padding: 0 12px;
 }
 .season_list_item {
-  border: 1px solid;
   width: 100%;
   display: flex;
   gap: 1.2vw;
@@ -336,8 +381,7 @@ section.bestseller {
 .item:nth-child(2) {
   flex-grow: 2;
 }
-.item .season_img {
-}
+
 .item .season_img img {
   width: 100%;
   height: 100%;
@@ -345,9 +389,131 @@ section.bestseller {
 }
 .season_txt.ab_txt {
   position: absolute;
-  left: 0;
+  left: 62px;
   bottom: 0;
+  /* bottom: 48px; */
+}
+.season_txt.ab_txt > h4 {
+  font-size: 24px;
+}
+.season_txt.ab_txt > p {
+  font-size: 16px;
+  color: #666;
+  padding-top: 7.5px;
+  padding-bottom: 48px;
 }
 .season_txt.center_txt {
   text-align: center;
+}
+.season_txt.center_txt > h4 {
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.025em;
+  padding-bottom: 3px;
+}
+.season_txt.center_txt > p {
+  font-size: 16px;
+  letter-spacing: -0.025em;
+}
+.season_txt.center_txt > p:nth-child(2) {
+  color: #888;
+  padding: 0 6px 15px;
+}
+/* 설화수 스토어 */
+.store {
+  margin-top: 120px;
+  padding: 0 12px;
+}
+.store_inner {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.2vw;
+}
+.store_inner .store_inner_list img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.store_inner .store_inner_list .store_txt {
+  text-align: center;
+}
+.store_inner .store_inner_list .store_txt > p:first-child {
+  font-size: 28px;
+  padding: 22px 0 14px;
+  font-weight: 600;
+}
+.store_inner .store_inner_list .store_txt > p:last-child {
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: -0.025em;
+  padding: 1.3% 4%;
+  border: 1px solid #000;
+}
+/* 푸터 */
+footer > div {
+  border-top: 1px solid #ddd;
+}
+.footer_con {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+.footer_top > .footer_con {
+  width: 100%;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer_top > .footer_con .footer_info > ul {
+  display: flex;
+  gap: 20px;
+}
+.footer_info > ul li a,
+.footer_con > p:first-child {
+  font-size: 15px;
+  color: #555;
+}
+.footer_top > .footer_con .footer_sns > ul {
+  display: flex;
+}
+.footer_sns > ul > li > a.mark {
+  display: inline-block;
+  width: 42px;
+}
+.footer_top > .footer_con .footer_sns > ul a.mark img {
+  display: block;
+  width: 100%;
+}
+.footer_sns > ul {
+  display: flex;
+  gap: 10px;
+}
+
+.footer_bt {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+.footer_bt .footer_con {
+  margin-bottom: 10px;
+}
+.footer_bt .footer_con > p:last-child {
+  font-size: 13px;
+  color: #767676;
+  margin-top: 10px;
+}
+.go_top_btn {
+  position: fixed;
+  bottom: 0;
+  right: 21%;
+  background-color: #767676;
+  opacity: 0.5;
+  width: 60px;
+  height: 60px;
+  z-index: 999;
+}
+.go_top_btn img {
+  width: 100%;
+  display: block;
 }
