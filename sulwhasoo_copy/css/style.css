@@ -69,7 +69,7 @@ header.on .links > a > img {
   filter: invert(0%);
 }
 .header {
-  width: 95%;
+  padding: 0 7%;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -282,6 +282,7 @@ button > img {
   max-width: 1440px;
   margin: 0 auto;
   margin-bottom: 100px;
+  padding: 0 24px;
 }
 .con > h1 {
   font-size: 28px;
@@ -311,7 +312,7 @@ button > img {
 }
 .item_txt .txt_price {
   font-weight: 500;
-  font-style: 16px;
+  font-size: 16px;
 }
 .section_recom .swiper2_btn {
   position: absolute;
@@ -330,6 +331,7 @@ section.bestseller {
   width: 100%; /* 화면에 맞게 */
   max-width: 1440px; /* 최대폭 제한 */
   margin: 0 auto;
+  padding: 0 24px;
   position: relative;
 }
 
@@ -365,7 +367,7 @@ section.bestseller {
 /* 설화수 시즌 추천 */
 .season_list {
   margin-top: 120px;
-  padding: 0 12px;
+  /* padding: 0 12px; */
 }
 .season_list_item {
   width: 100%;
@@ -451,17 +453,21 @@ section.bestseller {
   border: 1px solid #000;
 }
 /* 푸터 */
-footer > div {
-  border-top: 1px solid #ddd;
+
+.footer_inner {
+  padding-bottom: 37px;
+}
+.footer_inner > div {
+  margin: 0 auto;
+  padding: 0 50px;
 }
 .footer_con {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 50px;
-}
-.footer_top > .footer_con {
   width: 100%;
   height: 54px;
+}
+.footer_top > .footer_con {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -474,6 +480,9 @@ footer > div {
 .footer_con > p:first-child {
   font-size: 15px;
   color: #555;
+}
+.footer_info > ul li:nth-child(3) > a {
+  font-weight: 700;
 }
 .footer_top > .footer_con .footer_sns > ul {
   display: flex;
@@ -495,9 +504,7 @@ footer > div {
   padding-top: 10px;
   padding-bottom: 30px;
 }
-.footer_bt .footer_con {
-  margin-bottom: 10px;
-}
+
 .footer_bt .footer_con > p:last-child {
   font-size: 13px;
   color: #767676;

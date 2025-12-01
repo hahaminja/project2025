@@ -44,6 +44,18 @@ var swiper = new Swiper(".mySwiper", {
     draggable: true,
   },
 });
+//플레이 정지/재생
+document.querySelector(".stop").onclick = function () {
+  swiper.autoplay.stop();
+  $(this).hide();
+  $(".play").show();
+};
+document.querySelector(".play").onclick = function () {
+  swiper.autoplay.start();
+  $(this).hide();
+  $(".stop").show();
+};
+
 //설화수 추천 슬라이드
 var swiper2 = new Swiper(".mySwiper2", {
   loop: true,

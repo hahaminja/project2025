@@ -1,0 +1,58 @@
+@media screen and (max-width: 1170px) {
+  .footer_sns {
+    position: relative;
+    top: 70px;
+  }
+  .go_top_btn {
+    transition: 0.5s;
+    right: 7%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header .header_top .lan,
+  header .header_top .links a,
+  nav.menu {
+    display: none;
+  }
+  /* 설화수 추천 */
+  .item_txt .txt_name {
+    font-size: 16px;
+  }
+  .item_txt .txt_body,
+  .item_txt .txt_price {
+    font-size: 12px;
+  }
+
+  /* 베스트셀러 */
+  .con > h1 {
+    font-size: 20px;
+  }
+  .best_seller_txt > h1 {
+    font-size: 24px;
+  }
+  .best_seller_txt > .bs_txt_body {
+    font-size: 14px;
+  }
+  .best_seller_txt > .bs_txt_btn {
+    font-size: 10px;
+  }
+  /* 설화수 시즌 추천 */
+  .season_txt.ab_txt {
+    left: 30px;
+  }
+  .season_txt.center_txt > h4,
+  .season_txt.ab_txt > h4 {
+    font-size: 16px;
+  }
+  .season_txt.center_txt > p,
+  .season_txt.ab_txt > p {
+    font-size: 12px;
+  }
+  /* 스토어 */
+  .store_inner .store_inner_list .store_txt > p:first-child {
+    font-size: 20px;
+  }
+  .store_inner .store_inner_list .store_txt > p:last-child {
+    font-size: 10px;
+  }
+}
