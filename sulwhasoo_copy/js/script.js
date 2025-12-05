@@ -73,3 +73,31 @@ var swiper2 = new Swiper(".mySwiper2", {
 });
 // AOS애니메이션
 AOS.init();
+//모바일 서브메뉴
+$(".hamburger_btn").click(function () {
+  $(".mobile_con").addClass("on");
+  $(".go_top_btn").hide();
+});
+$(".close_btn").click(function () {
+  $(".mobile_con").removeClass("on");
+  $(".go_top_btn").show();
+});
+
+$(".mobile_sub_con").click(function () {
+  const inner = $(this).find(".mobile_sub_inner");
+
+  if ($(this).hasClass("on")) {
+    inner.css("max-height", 0);
+    $(this).removeClass("on");
+  } else {
+    inner.css("max-height", inner[0].scrollHeight + "px");
+    $(this).addClass("on");
+  }
+});
+
+$(".kor").click(function () {
+  $(".mobile_lan_inner").show();
+});
+$(".mobile_lan_close_btn").click(function () {
+  $(".mobile_lan_inner").hide();
+});

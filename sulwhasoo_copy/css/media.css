@@ -10,10 +10,29 @@
 }
 @media screen and (max-width: 1024px) {
   header .header_top .lan,
-  header .header_top .links a,
+  header .header_top .links > .search_store,
+  header .header_top .links > .buy,
+  header .header_top .links > .search,
   nav.menu {
-    display: none;
+    display: none !important;
   }
+  header .header_top .links a.search_mo {
+    display: block !important;
+  }
+  .header {
+    margin-top: 0;
+    padding: 0 2%;
+  }
+  .header .header_top {
+    height: 68px;
+  }
+  .header .header_top .logo img {
+    width: 112px;
+  }
+  .header .header_top {
+    align-items: center;
+  }
+
   /* 설화수 추천 */
   .item_txt .txt_name {
     font-size: 16px;

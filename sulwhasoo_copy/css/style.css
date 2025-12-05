@@ -25,6 +25,7 @@ a {
 }
 html,
 body {
+  overflow: hidden;
   scroll-behavior: smooth;
 }
 .wrap {
@@ -43,7 +44,7 @@ header.on {
   background: #fff;
 }
 .header_top {
-  padding-top: 2%;
+  margin-top: 10px;
 }
 .header_top > div > a {
   font-size: 15px;
@@ -59,22 +60,29 @@ header.on .links > a,
 header.on nav.menu > ul > li > a {
   color: #000;
 }
-
+header.on .hamburger_btn > a > span {
+  background-color: #ccc;
+}
 .header_top .lan img,
-.links > a > img {
+.links > a.search > img {
   filter: invert(100%);
+}
+.links > a.search_mo > img {
+  filter: contrast(0) brightness(100);
 }
 header.on .header_top .lan img,
 header.on .links > a > img {
   filter: invert(0%);
 }
+
 .header {
+  margin-top: 10px;
   padding: 0 7%;
-  max-width: 1100px;
-  margin: 0 auto;
 }
 .header .header_top {
   position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
   height: 78px;
   display: flex;
   justify-content: space-between;
@@ -148,10 +156,217 @@ header.on .links > a > img {
 .header .header_top .links > a:last-child img {
   vertical-align: middle;
 }
-.header .header_top .links > a:last-child::after {
+.header .header_top .links > a.search_mo {
+  display: none;
+}
+.header .header_top .links > a:nth-child(3):after,
+.header .header_top .links > a:nth-child(4):after {
   content: "";
 }
+.hamburger_btn {
+  width: 23px;
+  height: 18px;
+}
+.hamburger_btn > a {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hamburger_btn > a > span {
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+/* 햄버거 메뉴 시작*/
 
+.mobile_con {
+  position: fixed;
+  z-index: 999;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto; /* 스크롤 가능 */
+  -webkit-overflow-scrolling: touch; /* iOS 부드러운 스크롤 */
+  background: #fff;
+  transition: left 0.5s ease-in-out;
+  /* display: none; */
+}
+.mobile_con.on {
+  left: 0;
+}
+.mobile_con_inner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.mobile_top {
+  flex: 1 0 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+}
+.mobile_top_logo {
+  width: 112px;
+}
+.mobile_top_logo > a > img,
+.close_btn > a > img {
+  width: 100%;
+  object-fit: cover;
+}
+.close_btn {
+  width: 24px;
+}
+
+.mobile_menu > ul {
+  margin: 15px 0 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile_menu > ul > li a {
+  display: inline-flex;
+  font-size: 23px;
+  line-height: 2;
+  padding: 1vw 20px;
+  color: #333;
+}
+
+.mobile_sub_con > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mobile_sub_con.on > a {
+  font-weight: 600;
+}
+.menu_toggle_btn {
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+.menu_toggle_btn::before,
+.menu_toggle_btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  transform-origin: center center;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  background: #666;
+}
+
+/* 가로선 */
+.menu_toggle_btn::before {
+  width: 16px;
+  height: 1px;
+}
+
+/* 세로선 */
+.menu_toggle_btn::after {
+  width: 1px;
+  height: 16px;
+}
+
+/* .on 상태에서 세로선을 가로로 바꿈 -> plus가 - 로 바뀜 */
+.mobile_sub_con.on .menu_toggle_btn::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* 필요하면 가로선은 사라지게(또는 X로 회전 등) */
+.mobile_sub_con.on .menu_toggle_btn::before {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(0deg) scaleX(0.8);
+}
+.mobile_sub_con.on .mobile_sub_inner {
+  height: 100%;
+}
+/* 모바일 서브 이너 */
+.mobile_sub_inner {
+  background: #faf9f5;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+.mobile_sub_inner > ul > li {
+  border-bottom: 1px solid rgb(235, 235, 235);
+}
+.mobile_sub_inner > ul > li:last-child {
+  border-bottom: none;
+}
+.mobile_sub_inner > ul > li > a {
+  display: block;
+  width: 100%;
+  font-size: 19px;
+}
+
+.mobile_info {
+  height: 100vh;
+  background: #333;
+}
+.mobile_info .mobile_login {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #666;
+  padding: 12px 0;
+}
+.mobile_info .mobile_login > a {
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+.mobile_info .mobile_login > a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.mobile_lan {
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.mobile_lan > a {
+  color: #fff;
+}
+.mobile_lan_inner {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  z-index: 1000;
+  display: none;
+}
+.mobile_lan_inner .mobile_lan_inner_top {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+}
+.mobile_lan_inner .mobile_lan_inner_top h2 {
+  font-size: 23px;
+  font-weight: 600;
+}
+.mobile_lan_close_btn {
+  width: 24px;
+}
+.mobile_lan_close_btn img {
+  width: 100%;
+  object-fit: cover;
+}
 /* nav 메뉴 시작 */
 
 .header nav.menu > ul {
@@ -518,7 +733,7 @@ section.bestseller {
   opacity: 0.5;
   width: 60px;
   height: 60px;
-  z-index: 999;
+  z-index: 99;
 }
 .go_top_btn img {
   width: 100%;

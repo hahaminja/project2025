@@ -37,6 +37,13 @@
       <header>
         <div class="header">
           <div class="header_top">
+            <div class="hamburger_btn">
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+              </a>
+            </div>
             <div class="lan">
               <a href="#"
                 >한국/한국어<img
@@ -60,6 +67,7 @@
                 </ul>
               </div>
             </div>
+
             <a href="#" class="logo">
               <img
                 src="./images/sulwhasoo_white_logo_220902.png"
@@ -67,11 +75,16 @@
               />
             </a>
             <div class="links">
-              <a href="#">매장찾기</a>
-              <a href="#">구매하기</a>
-              <a href="#"
+              <a href="#" class="search_store">매장찾기</a>
+              <a href="#" class="buy">구매하기</a>
+              <a href="#" class="search"
                 ><img
                   src="./images/sulwhasoo_ico-search-18x18-black_pc_kr_250605.svg"
+                  alt="검색"
+              /></a>
+              <a href="#" class="search_mo"
+                ><img
+                  src="./images/sulwhasoo_ico-search-23x23-gray_mo_kr_250605.svg"
                   alt="검색"
               /></a>
             </div>
@@ -139,14 +152,120 @@
               </li>
             </ul>
           </nav>
-
-          <div class="sub_wrap">
-            <div class="sub_inner">
-              <div class="sub_btn"></div>
-              <div class="sub_menu">
+          <div class="mobile_con">
+            <div class="mobile_con_inner">
+              <div class="mobile_top">
+                <p class="mobile_top_logo">
+                  <a href="#"
+                    ><img
+                      src="./images/sulwhasoo_logo-amber_250224.png"
+                      alt="hamburger_logo"
+                  /></a>
+                </p>
+                <p class="close_btn">
+                  <a href="#"
+                    ><img src="./images/ico_close_mo.png" alt="닫힘"
+                  /></a>
+                </p>
+              </div>
+              <div class="mobile_menu">
                 <ul>
-                  <li><a href="#"></a></li>
+                  <li><a href="#">윤조</a></li>
+                  <li><a href="#">자음생</a></li>
+                  <li><a href="#">기프트</a></li>
+                  <li><a href="#">베스트셀러</a></li>
+                  <li class="mobile_sub_con">
+                    <a href="#"
+                      ><span>제품</span><i class="menu_toggle_btn"></i
+                    ></a>
+                    <div class="mobile_sub_inner">
+                      <ul>
+                        <li><a href="#">스킨케어</a></li>
+                        <li><a href="#">메이크업</a></li>
+                        <li><a href="#">남성</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="mobile_sub_con">
+                    <a href="#"
+                      ><span>스파</span><i class="menu_toggle_btn"></i
+                    ></a>
+                    <div class="mobile_sub_inner">
+                      <ul>
+                        <li><a href="#">소개</a></li>
+                        <li><a href="#">스파프로그램</a></li>
+                        <li><a href="#">예약</a></li>
+                        <li><a href="#">매장찾기</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="mobile_sub_con">
+                    <a href="#"
+                      ><span>플래그십 스토어</span
+                      ><i class="menu_toggle_btn"></i
+                    ></a>
+                    <div class="mobile_sub_inner">
+                      <ul>
+                        <li><a href="#">플래그십스토어</a></li>
+                        <li><a href="#">설화수 북촌</a></li>
+                        <li><a href="#">설화수 도산</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="mobile_sub_con">
+                    <a href="#"
+                      ><span>ABOUT 설화수</span><i class="menu_toggle_btn"></i
+                    ></a>
+                    <div class="mobile_sub_inner">
+                      <ul>
+                        <li><a href="#">브랜드스토리</a></li>
+                        <li><a href="#">브랜드지속가능성</a></li>
+                        <li><a href="#">설화문화전</a></li>
+                        <li><a href="#">살롱 설화수</a></li>
+                        <li><a href="#">컬처프로젝트</a></li>
+                        <li><a href="#">브랜드뉴스</a></li>
+                        <li><a href="#">명작컬렉션</a></li>
+                      </ul>
+                    </div>
+                  </li>
                 </ul>
+              </div>
+              <div class="mobile_info">
+                <div class="mobile_login">
+                  <a href="#">로그인</a>
+                  <a href="#">매장찾기</a>
+                </div>
+                <div class="mobile_lan">
+                  <a href="#">LANGUAGE</a>
+                  <a href="#" class="kor"
+                    >한국/한국어 <i class="fa-solid fa-plus"></i
+                  ></a>
+                </div>
+                <div class="mobile_lan_inner">
+                  <div class="mobile_lan_inner_top">
+                    <div></div>
+                    <h2>언어 선택</h2>
+                    <p class="mobile_lan_close_btn">
+                      <a href="#"
+                        ><img src="./images/ico_close_mo.png" alt="닫힘"
+                      /></a>
+                    </p>
+                  </div>
+                  <div class="mobile_lan_inner_body">
+                    <ul>
+                      <li><a href="#">한국/한국어</a></li>
+                      <li><a href="#">International/English</a></li>
+                      <li><a href="#">中文</a></li>
+                      <li><a href="#">繁體中文</a></li>
+                      <li><a href="#">Singapore/English</a></li>
+                      <li><a href="#">Malaysia/English</a></li>
+                      <li><a href="#">Việt Nam/Tiếng Việt</a></li>
+                      <li><a href="#">Indonesia/Bahasa Indonesia</a></li>
+                      <li><a href="#">ประเทศไทย/ไทย</a></li>
+                      <li><a href="#">USA/English</a></li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
