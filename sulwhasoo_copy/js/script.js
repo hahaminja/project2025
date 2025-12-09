@@ -61,6 +61,7 @@ var swiper2 = new Swiper(".mySwiper2", {
   loop: true,
   slidesPerView: 1,
   spaceBetween: 30,
+
   breakpoints: {
     720: {
       slidesPerView: 3,
@@ -70,6 +71,7 @@ var swiper2 = new Swiper(".mySwiper2", {
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
+    pauseOnMouseEnter: true,
   },
   navigation: {
     nextEl: ".swiper2_btn.next",
