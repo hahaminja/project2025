@@ -25,8 +25,11 @@ a {
 }
 html,
 body {
-  overflow: hidden;
   scroll-behavior: smooth;
+}
+html.on,
+body.on {
+  overflow: hidden;
 }
 .wrap {
   font-family: "NanumBarunGothicLight";
@@ -166,6 +169,7 @@ header.on .links > a > img {
 .hamburger_btn {
   width: 23px;
   height: 18px;
+  display: none;
 }
 .hamburger_btn > a {
   height: 100%;
@@ -188,7 +192,8 @@ header.on .links > a > img {
   top: 0;
   width: 100%;
   height: 100vh;
-  overflow-y: auto; /* 스크롤 가능 */
+  /* 스크롤 가능 */
+  /* overflow-y: auto;  */
   -webkit-overflow-scrolling: touch; /* iOS 부드러운 스크롤 */
   background: #fff;
   transition: left 0.5s ease-in-out;
@@ -367,6 +372,35 @@ header.on .links > a > img {
   width: 100%;
   object-fit: cover;
 }
+.mobile_lan_inner .mobile_lan_inner_body ul {
+  width: 96%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.mobile_lan_inner .mobile_lan_inner_body ul li a {
+  display: block;
+  padding: 10px 0;
+  font-size: 16px;
+  position: relative;
+}
+.mobile_lan_inner .mobile_lan_inner_body ul li.on a {
+  font-weight: 700;
+}
+.mobile_lan_inner .mobile_lan_inner_body ul li a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 21px;
+  height: 12px;
+  border-bottom: 2px solid #333;
+  border-left: 2px solid #333;
+  transform: rotate(-45deg);
+  display: none;
+}
+.mobile_lan_inner .mobile_lan_inner_body ul li.on a::after {
+  display: block;
+}
 /* nav 메뉴 시작 */
 
 .header nav.menu > ul {
@@ -431,6 +465,16 @@ header nav.menu > ul > li > a:hover {
 }
 .slide_txt > p {
   margin-bottom: 20px;
+}
+.slide_pc {
+  display: block;
+}
+.slide_mo {
+  display: none;
+}
+.slide_mo img {
+  width: 100%;
+  object-fit: cover;
 }
 .swiper-slide img {
   display: block;

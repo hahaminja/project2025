@@ -59,8 +59,13 @@ document.querySelector(".play").onclick = function () {
 //설화수 추천 슬라이드
 var swiper2 = new Swiper(".mySwiper2", {
   loop: true,
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 30,
+  breakpoints: {
+    720: {
+      slidesPerView: 3,
+    },
+  },
 
   autoplay: {
     delay: 2500,
@@ -77,10 +82,14 @@ AOS.init();
 $(".hamburger_btn").click(function () {
   $(".mobile_con").addClass("on");
   $(".go_top_btn").hide();
+  $("html").addClass("on");
+  $("body").addClass("on");
 });
 $(".close_btn").click(function () {
   $(".mobile_con").removeClass("on");
   $(".go_top_btn").show();
+  $("html").removeClass("on");
+  $("body").removeClass("on");
 });
 
 $(".mobile_sub_con").click(function () {
@@ -100,4 +109,9 @@ $(".kor").click(function () {
 });
 $(".mobile_lan_close_btn").click(function () {
   $(".mobile_lan_inner").hide();
+});
+
+$(".mobile_lan_inner_body li").click(function () {
+  $(".mobile_lan_inner_body li").removeClass("on");
+  $(this).addClass("on");
 });

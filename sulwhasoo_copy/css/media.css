@@ -32,7 +32,9 @@
   .header .header_top {
     align-items: center;
   }
-
+  .hamburger_btn {
+    display: block;
+  }
   /* 설화수 추천 */
   .item_txt .txt_name {
     font-size: 16px;
@@ -73,5 +75,60 @@
   }
   .store_inner .store_inner_list .store_txt > p:last-child {
     font-size: 10px;
+  }
+  /* 푸터 */
+  .footer_inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer_top > .footer_con {
+    flex-direction: column-reverse;
+  }
+  .footer_sns {
+    position: static;
+  }
+  .footer_info > ul li a,
+  .footer_con > p:first-child {
+    font-size: 13px;
+  }
+  .footer_bt {
+    text-align: center;
+  }
+  .footer_bt .footer_con > p:last-child {
+    margin-top: 5px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .slide_mo {
+    display: block;
+  }
+  .slide_pc,
+  .slide_pc img {
+    display: none;
+  }
+  .swiper_btn {
+    display: none;
+  }
+  .slide_txt {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 35vw;
+    text-align: center;
+  }
+  .slide_txt > p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .slide_txt > h1 {
+    font-size: 24px;
+  }
+
+  .swiper-horizontal > .swiper-scrollbar,
+  .swiper-scrollbar.swiper-scrollbar-horizontal {
+    width: 500px;
+    height: 4px;
   }
 }
