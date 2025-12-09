@@ -131,4 +131,46 @@
     width: 500px;
     height: 4px;
   }
+
+  .bestseller_inner {
+    width: 100%;
+    padding-top: 131.2%;
+    background-image: url(/sulwhasoo_copy/images/sulwhasoo_main_bestseller_mo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .season_list_item {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .item {
+    flex: 1 0 40%;
+  }
+  .season_list_item .item:nth-child(1) {
+    order: 2;
+  }
+  .season_list_item .item:nth-child(2) {
+    order: 1;
+    flex: 0 0 100%;
+  }
+  .season_list_item .item:nth-child(3) {
+    order: 3;
+  }
+  .season_txt.ab_txt > h4 {
+    font-size: 20px;
+  }
+  .season_txt.ab_txt > p {
+    font-size: 14px;
+  }
+  .season_txt.center_txt {
+    padding-bottom: 40px;
+  }
+  .store_inner {
+    flex-direction: column;
+    gap: 5vw;
+  }
+  .store_inner .store_inner_list .store_txt > p:last-child {
+    font-size: 11px;
+  }
 }
